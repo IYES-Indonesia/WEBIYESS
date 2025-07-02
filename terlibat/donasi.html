@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donasi - Dukung IYES INDONESIA</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../responsive-style.css" />
+    <link rel="icon" href="../images/favicon.png.svg" type="image/png" />
+  </head>
+  <body class="donation-page">
+    <header id="header">
+      <nav class="container-fluid container-lg main-nav">
+        <a href="../index.html" class="logo-container">
+          <img
+            src="../images/logo-IYES.png.svg"
+            alt="Logo IYES INDONESIA"
+            class="logo-img"
+          />
+          <span class="logo-text">IYES INDONESIA</span>
+        </a>
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Beranda</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownTentang"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Tentang IYES</a
+            >
+            <div
+              class="dropdown-menu mega-menu"
+              aria-labelledby="navbarDropdownTentang"
+            >
+              <div class="mega-menu-content">
+                <div class="mega-menu-links">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <a href="tentang-kami.html" class="mega-menu-link-item">
+                        <i class="fas fa-info-circle"></i>
+                        <div class="item-text">
+                          <strong>Tentang Kami</strong
+                          ><small>Visi, Misi, dan Sejarah kami.</small>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-lg-6">
+                      <a
+                        href="../tentang-iyes/tentang-kami.html"
+                        class="mega-menu-link-item"
+                      >
+                        <i class="fas fa-sitemap"></i>
+                        <div class="item-text">
+                          <strong>Struktur Kepengurusan</strong
+                          ><small>Kenali tim hebat di balik layar.</small>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-lg-12">
+                      <a
+                        href="../tentang-iyes/alumni.html"
+                        class="mega-menu-link-item"
+                      >
+                        <i class="fas fa-user-friends"></i>
+                        <div class="item-text">
+                          <strong>Kisah & Dampak</strong
+                          ><small>Cerita inspiratif dari komunitas IYES.</small>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="mega-menu-feature"
+                  style="background-image: url('../images/bg-tentang.jpg')"
+                >
+                  <h4>Mengenal IYES</h4>
+                  <p>
+                    Organisasi nirlaba yang berupaya mewadahi pemuda untuk turut
+                    andil dalam perubahan positif.
+                  </p>
+                  <a href="tentang-kami.html">Selengkapnya &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="../program/program.html"
+              id="navbarDropdownProgram"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Program</a
+            >
+            <div
+              class="dropdown-menu mega-menu"
+              aria-labelledby="navbarDropdownProgram"
+            >
+              <div class="mega-menu-content">
+                <div class="mega-menu-links">
+                  <div class="row">
+                    <div class="col-12 mb-2">
+                      <a
+                        href="../program/program.html"
+                        class="mega-menu-link-item p-0"
+                      >
+                        <div class="item-text">
+                          <strong
+                            style="
+                              font-size: 1rem;
+                              color: var(--primary-color-dark-blue);
+                            "
+                            >Jelajahi Program Kami</strong
+                          ><small>Temukan inisiatif yang sesuai.</small>
+                        </div>
+                      </a>
+                      <hr />
+                    </div>
+                    <div class="col-lg-6">
+                      <a
+                        href="../program/iyes-mengajar/iyeem.html"
+                        class="mega-menu-link-item"
+                        ><i class="fas fa-graduation-cap"></i>
+                        <div class="item-text">
+                          <strong>IYES Mengajar</strong
+                          ><small>Dedikasi untuk pendidikan.</small>
+                        </div></a
+                      >
+                    </div>
+                    <div class="col-lg-6">
+                      <a
+                        href="../program/yvc/yvc.html"
+                        class="mega-menu-link-item"
+                        ><i class="fas fa-users"></i>
+                        <div class="item-text">
+                          <strong>Youth Voluntary Camp (YVC)</strong
+                          ><small>Kamp kerelawanan proyek sosial.</small>
+                        </div></a
+                      >
+                    </div>
+                    <div class="col-lg-6">
+                      <a
+                        href="../program/sdgs/sdgs.html"
+                        class="mega-menu-link-item"
+                        ><i class="fas fa-bullseye"></i>
+                        <div class="item-text">
+                          <strong>Riau Youth SDGs</strong
+                          ><small>Aksi pemuda untuk SDGs.</small>
+                        </div></a
+                      >
+                    </div>
+                    <div class="col-lg-6">
+                      <a
+                        href="../program/scale-up/scaleup1.html"
+                        class="mega-menu-link-item"
+                        ><i class="fas fa-rocket"></i>
+                        <div class="item-text">
+                          <strong>Scale Up</strong
+                          ><small>Inkubasi untuk dampak lebih luas.</small>
+                        </div></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="mega-menu-feature"
+                  style="background-image: url('../images/bg-program.jpg')"
+                >
+                  <h4>Program Berdampak</h4>
+                  <p>
+                    Setiap program dirancang untuk menciptakan perubahan positif
+                    yang nyata.
+                  </p>
+                  <a href="../program/program.html">Lihat Semua &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="../media-update/berita-cerita.html"
+              id="navbarDropdownMedia"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Media & Update</a
+            >
+            <div
+              class="dropdown-menu mega-menu"
+              aria-labelledby="navbarDropdownMedia"
+            >
+              <div class="mega-menu-content">
+                <div class="mega-menu-links">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <a
+                        href="../media-update/berita-cerita.html"
+                        class="mega-menu-link-item"
+                        ><i class="far fa-newspaper"></i>
+                        <div class="item-text">
+                          <strong>Berita & Cerita</strong
+                          ><small>Ikuti kabar terbaru dari kami.</small>
+                        </div></a
+                      >
+                    </div>
+                    <div class="col-lg-12">
+                      <a
+                        href="../media-update/podcast.html"
+                        class="mega-menu-link-item"
+                        ><i class="fas fa-podcast"></i>
+                        <div class="item-text">
+                          <strong>Podcast IYES</strong
+                          ><small>Dengarkan diskusi inspiratif.</small>
+                        </div></a
+                      >
+                    </div>
+                    <div class="col-lg-12">
+                      <a
+                        href="../media-update/annual-report.html"
+                        class="mega-menu-link-item"
+                        ><i class="fas fa-book-open"></i>
+                        <div class="item-text">
+                          <strong>Laporan Tahunan</strong
+                          ><small>Transparansi dan dampak kami.</small>
+                        </div></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="mega-menu-feature"
+                  style="background-image: url('../images/bg-media.jpg')"
+                >
+                  <h4>Tetap Terkini</h4>
+                  <p>
+                    Jangan lewatkan pembaruan dan konten eksklusif dari
+                    komunitas kami.
+                  </p>
+                  <a href="../media-update/berita-cerita.html"
+                    >Baca Sekarang &rarr;</a
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href=""
+              id="navbarDropdownTerlibat"
+              role="button"
+              data-bs-toggle="dropdown"
+              data-category="terlibat"
+              aria-expanded="false"
+              >Terlibat</a
+            >
+            <div
+              class="dropdown-menu mega-menu"
+              aria-labelledby="navbarDropdownTerlibat"
+            >
+              <div class="mega-menu-content">
+                <div class="mega-menu-links">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <a
+                        href="../terlibat/kemitraan.html"
+                        class="mega-menu-link-item"
+                        ><i class="fas fa-handshake"></i>
+                        <div class="item-text">
+                          <strong>Kemitraan</strong
+                          ><small>Jalin kolaborasi strategis.</small>
+                        </div></a
+                      >
+                    </div>
+                    <div class="col-lg-6">
+                      <a
+                        href="https://linktr.ee/iyesindonesia"
+                        class="mega-menu-link-item"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        ><i class="fas fa-user-plus"></i>
+                        <div class="item-text">
+                          <strong>Jadi Volunteer</strong
+                          ><small>Bergabunglah menjadi relawan.</small>
+                        </div></a
+                      >
+                    </div>
+                    <div class="col-lg-6">
+                      <a
+                        href="../terlibat/donasi.html"
+                        class="mega-menu-link-item"
+                        ><i class="fas fa-donate"></i>
+                        <div class="item-text">
+                          <strong>Donasi</strong
+                          ><small>Dukung misi kami.</small>
+                        </div></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="mega-menu-feature"
+                  style="background-image: url('../images/bg-terlibat.jpg')"
+                >
+                  <h4>Jadi Bagian dari Perubahan</h4>
+                  <p>
+                    Kontribusi Anda sangat berarti untuk menciptakan masa depan
+                    yang lebih baik.
+                  </p>
+                  <a href="../terlibat/terlibat.html">Hubungi Kami &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../kontak.html">Kontak</a>
+          </li>
+          <li class="language-switcher">
+            <button id="lang-id" class="active-lang">ID</button
+            ><span class="separator">|</span><button id="lang-en">EN</button>
+          </li>
+        </ul>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-banner">
+        <div class="container text-center">
+          <h1>Dukung Misi Kami</h1>
+          <p class="lead">
+            Setiap kontribusi Anda sangat berarti untuk keberlanjutan program
+            pemberdayaan pemuda IYES INDONESIA.
+          </p>
+        </div>
+      </section>
+
+      <section id="donation-info" class="page-section py-5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+              <img
+                src="https://placehold.co/600x450/FF5B23/FFFFFF?text=Donasi+untuk+Masa+Depan"
+                class="img-fluid rounded shadow-lg"
+                alt="Ajakan Donasi IYES INDONESIA"
+              />
+            </div>
+            <div class="col-lg-6">
+              <h2 class="section-title-left">Mengapa Donasi Anda Penting?</h2>
+              <p>
+                Donasi Anda akan langsung digunakan untuk mendanai berbagai
+                program inti kami, seperti IYES Mengajar, workshop pengembangan
+                kapasitas pemuda, proyek sosial, serta penyediaan sarana dan
+                prasarana pendukung. Dengan dukungan Anda, kami dapat:
+              </p>
+              <ul class="list-styled">
+                <li>
+                  <i class="fas fa-check-circle text-primary-orange me-2"></i>
+                  Menjangkau lebih banyak anak-anak dan pemuda di daerah yang
+                  membutuhkan.
+                </li>
+                <li>
+                  <i class="fas fa-check-circle text-primary-orange me-2"></i>
+                  Meningkatkan kualitas dan dampak dari setiap program yang kami
+                  jalankan.
+                </li>
+                <li>
+                  <i class="fas fa-check-circle text-primary-orange me-2"></i>
+                  Mengembangkan inovasi baru untuk solusi permasalahan sosial.
+                </li>
+                <li>
+                  <i class="fas fa-check-circle text-primary-orange me-2"></i>
+                  Memastikan keberlanjutan operasional organisasi agar dapat
+                  terus berkarya.
+                </li>
+              </ul>
+              <p>
+                Bersama, kita bisa menciptakan perubahan yang lebih besar dan
+                masa depan yang lebih cerah untuk generasi muda Indonesia.
+              </p>
+            </div>
+          </div>
+
+          <hr class="my-5" />
+
+          <div class="text-center mb-5">
+            <h2 class="section-title">Cara Berdonasi</h2>
+            <p class="section-intro">
+              Anda dapat menyalurkan dukungan Anda melalui beberapa metode
+              berikut. Terima kasih atas kebaikan hati Anda!
+            </p>
+          </div>
+
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-5">
+              <div class="card donation-method-card h-100 shadow">
+                <div class="card-body text-center">
+                  <i class="fas fa-university fa-3x text-accent-blue mb-3"></i>
+                  <h4 class="donation-method-title">Transfer Bank</h4>
+                  <p class="mb-2">
+                    Anda dapat mentransfer donasi Anda ke rekening resmi IYES
+                    INDONESIA:
+                  </p>
+                  <p class="fw-bold mb-1">Bank XYZ</p>
+                  <p class="mb-1">
+                    Nomor Rekening:
+                    <span class="fw-semibold">123-456-7890</span>
+                  </p>
+                  <p class="mb-3">
+                    Atas Nama:
+                    <span class="fw-semibold">Yayasan IYES INDONESIA</span>
+                  </p>
+                  <p class="small text-muted">
+                    Mohon konfirmasi donasi Anda melalui email ke
+                    <a href="mailto:donasi@iyesindonesia.org"
+                      >donasi@iyesindonesia.org</a
+                    >
+                    agar kami dapat mengirimkan ucapan terima kasih.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-5">
+              <div class="card donation-method-card h-100 shadow">
+                <div class="card-body text-center">
+                  <i class="fas fa-wallet fa-3x text-accent-yellow mb-3"></i>
+                  <h4 class="donation-method-title">
+                    Dompet Digital (E-Wallet)
+                  </h4>
+                  <p class="mb-2">
+                    Salurkan donasi Anda dengan mudah melalui dompet digital:
+                  </p>
+                  <p class="mb-1">
+                    <img src="" alt="GoPay" class="e-wallet-logo my-2" />
+                  </p>
+                  <p class="mb-1">
+                    Nomor:
+                    <span class="fw-semibold"
+                      >0812-3456-7890 (IYES INDONESIA)</span
+                    >
+                  </p>
+                  <p class="mb-1">
+                    <img
+                      src="https://placehold.co/100x40/000000/FFFFFF?text=OVO"
+                      alt="OVO"
+                      class="e-wallet-logo my-2"
+                    />
+                  </p>
+                  <p class="mb-3">
+                    Nomor:
+                    <span class="fw-semibold"
+                      >0812-3456-7890 (IYES INDONESIA)</span
+                    >
+                  </p>
+                  <p class="small text-muted">
+                    Untuk donasi melalui metode lain atau pertanyaan lebih
+                    lanjut, silakan hubungi kami.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="text-center mt-5 section-outro">
+            Setiap rupiah dari donasi Anda akan dikelola secara transparan dan
+            akuntabel untuk sebesar-besarnya manfaat bagi penerima program kami.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <section class="partner-carousel-section">
+      <div class="container">
+        <h2 class="text-center mb-4">Partner & Sponsor Kami</h2>
+        <div class="scrolling-logos">
+          <div class="logos-slide top">
+            <img
+              src="https://placehold.co/150x70/888888/FFFFFF?text=MitraA1"
+              alt="Logo Mitra"
+            />
+            <img
+              src="https://placehold.co/150x70/888888/FFFFFF?text=MitraA2"
+              alt="Logo Mitra"
+            />
+            <img
+              src="https://placehold.co/150x70/888888/FFFFFF?text=MitraA3"
+              alt="Logo Mitra"
+            />
+            <img
+              src="https://placehold.co/150x70/888888/FFFFFF?text=MitraA4"
+              alt="Logo Mitra"
+            />
+            <img
+              src="https://placehold.co/150x70/888888/FFFFFF?text=MitraA1"
+              alt="Logo Mitra"
+            />
+          </div>
+        </div>
+        <div class="scrolling-logos mt-4">
+          <div class="logos-slide bottom">
+            <img src="images/logo-IYES.png.svg" alt="Logo Mitra" />
+            <img
+              src="https://placehold.co/150x70/888888/FFFFFF?text=MitraB2"
+              alt="Logo Mitra"
+            />
+            <img
+              src="https://placehold.co/150x70/888888/FFFFFF?text=MitraB3"
+              alt="Logo Mitra"
+            />
+            <img
+              src="https://placehold.co/150x70/888888/FFFFFF?text=MitraB4"
+              alt="Logo Mitra"
+            />
+            <img
+              src="https://placehold.co/150x70/888888/FFFFFF?text=MitraB1"
+              alt="Logo Mitra"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-content row py-5">
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 footer-info">
+            <h4 class="h5 fw-semibold">IYES INDONESIA</h4>
+            <p>Alamat Kantor Pusat Anda.<br />Kota, Provinsi, Kode Pos</p>
+            <p>
+              Email:
+              <a href="mailto:info@iyesindonesia.org">info@iyesindonesia.org</a>
+            </p>
+            <p>Telepon: <a href="tel:+62211234567">(021) 123-4567</a></p>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4 mb-lg-0 footer-links">
+            <h4 class="h5 fw-semibold">Tautan</h4>
+            <ul>
+              <li><a href="tentang-iyes/tentang-kami.html">Tentang Kami</a></li>
+              <li><a href="program/program.html">Program</a></li>
+              <li><a href="media-update/berita-cerita.html">Berita</a></li>
+              <li><a href="tentang-iyes/alumni.html">Alumni</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4 mb-lg-0 footer-links">
+            <h4 class="h5 fw-semibold">Dukungan</h4>
+            <ul>
+              <li><a href="terlibat/donasi.html">Donasi</a></li>
+              <li><a href="kontak.html">Volunteer</a></li>
+              <li><a href="kontak.html#faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 footer-social-media">
+            <h4 class="h5 fw-semibold">Terhubung</h4>
+            <a
+              href="https://www.instagram.com/iyesindonesia"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-instagram"></i></a
+            ><a
+              href="https://web.facebook.com/adminiyesindonesia"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-facebook-f"></i></a
+            ><a
+              href="https://www.linkedin.com/company/indonesian-youth-education-and-social/"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-linkedin-in"></i></a
+            ><a
+              href="#"
+              aria-label="TikTok"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-tiktok"></i></a
+            ><a
+              href="#"
+              aria-label="YouTube"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+        <div
+          class="footer-bottom text-center pt-4 mt-4 border-top border-white border-opacity-25"
+        >
+          <p class="mb-1">
+            &copy; <span id="current-year"></span> IYES INDONESIA. All Rights
+            Reserved.
+          </p>
+          <p class="small">
+            <a href="#">Kebijakan Privasi</a> |
+            <a href="#">Syarat & Ketentuan</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Kembali ke atas">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script.js"></script>
+  </body>
+</html>

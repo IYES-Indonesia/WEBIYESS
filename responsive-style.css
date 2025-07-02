@@ -1,0 +1,197 @@
+/* Desain Responsif (Media Queries)
+   =================================================================== */
+
+/* --- Tampilkan dropdown saat hover di layar besar --- */
+@media (min-width: 992px) {
+  .nav-links .nav-item.dropdown:hover > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .nav-links .nav-item.dropdown:hover > .dropdown-menu:not(.mega-menu) {
+    transform: translateY(0);
+  }
+}
+
+/* ... (media query lain yang mungkin sudah ada) ... */
+
+/* --- Aturan Responsif untuk Timeline Sejarah (Halaman Tentang Kami) --- */
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 31px;
+  }
+  .timeline-container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .timeline-container.right {
+    left: 0%;
+  }
+  .timeline-container.left::after,
+  .timeline-container.right::after {
+    left: 15px;
+  }
+}
+
+/* --- Aturan Responsif untuk Slider Arsip --- */
+@media (max-width: 767px) {
+  .slider-nav {
+    display: none;
+  }
+}
+
+/* --- Aturan Responsif untuk Halaman Kemitraan --- */
+@media (min-width: 992px) {
+  .story-card {
+    flex-direction: row;
+  }
+  .story-card.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+/* Breakpoint untuk Tablet & Mobile (di bawah 992px) */
+@media (max-width: 991.98px) {
+  /* --- Navigasi Mobile --- */
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-links {
+    display: none; /* Sembunyikan secara default */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: calc(var(--header-height) - 1px);
+    left: 0;
+    background-color: var(--neutral-color-white);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+  }
+
+  .nav-links.active {
+    display: flex; /* Tampilkan saat menu di-toggle */
+  }
+
+  .nav-links li.nav-item,
+  .nav-links li.language-switcher {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-links li.language-switcher {
+    padding: 10px 0;
+    justify-content: center;
+  }
+
+  .nav-links a.nav-link,
+  .nav-links .dropdown-toggle {
+    display: block;
+    padding: 10px 15px;
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .nav-links a.nav-link::after {
+    display: none;
+  }
+
+  .nav-links .dropdown-menu {
+    position: static !important;
+    float: none !important;
+    width: auto !important;
+    margin-top: 0 !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    display: none; /* Sembunyikan dropdown, perlu JS untuk handle accordion */
+  }
+
+  .nav-links .dropdown-item {
+    text-align: center;
+    color: var(--text-color-dark) !important;
+  }
+
+  .nav-links .dropdown-item:hover,
+  .nav-links .dropdown-item:focus {
+    background-color: var(--neutral-color-light-gray) !important;
+    color: var(--primary-color-orange) !important;
+  }
+
+  /* --- Penyesuaian Layout & Font --- */
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .featured-report {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .key-highlights {
+    justify-content: center;
+  }
+}
+
+/* Breakpoint untuk Mobile Kecil (di bawah 768px) */
+@media (max-width: 767.98px) {
+  .program-card-image {
+    height: 200px;
+  }
+}
+
+/* Responsive Design for FAQ */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 60px 0;
+  }
+  .faq-section .section-description {
+    margin-bottom: 40px;
+  }
+  .faq-container {
+    padding: 0 15px; /* Padding samping untuk kontainer FAQ */
+  }
+  .faq-question {
+    font-size: 1.05rem;
+    padding: 18px 20px;
+  }
+  .faq-answer {
+    font-size: 0.95rem;
+    padding: 0 20px 15px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-question {
+    font-size: 1rem;
+    padding: 15px 18px;
+  }
+  .faq-answer {
+    font-size: 0.9rem;
+    padding: 0 18px 12px 18px;
+  }
+}
