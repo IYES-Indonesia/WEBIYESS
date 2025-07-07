@@ -2980,33 +2980,6 @@ body.partnership-page {
   opacity: 1;
 }
 
-/* Keyframes untuk Animasi
-   =================================================================== */
-@keyframes arc-up-animation 
-  0%,
-  100% {
-  transform: translateY(0px);
-}
-50% {
-  transform: translateY(-50px);
-}
-
-@keyframes scroll-left 
-  0% {
-  transform: translateX(0);
-}
-100% {
-  transform: translateX(-50%);
-}
-
-@keyframes scroll-right 
-  0% {
-  transform: translateX(-50%);
-}
-100% {
-  transform: translateX(0);
-}
-
 /* ====================================================== */
 /* C. STYLE UNTUK HALAMAN DETAIL PROGRAM (YVC, dll.)
 /* ====================================================== */
