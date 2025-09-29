@@ -613,51 +613,273 @@ h6 {
   transform: translateX(5px);
 }
 
-/* Testimoni Section (Halaman Utama)
-   =================================================================== */
-.testimonials-section-v2 {
+/* =============================================
+   Komponen: Section Berita & Prestasi di Beranda
+   ============================================= */
+
+.news-section {
+  background-color: var(--neutral-color-white);
+}
+
+/* =============================================
+  Slider Berita Utama di Beranda
+   ============================================= */
+
+.featured-news-card {
   position: relative;
-  padding: 8rem 0 4rem;
-  background-color: var(--neutral-color-light-gray);
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+  color: var(--neutral-color-white);
+  text-decoration: none;
+  box-shadow: var(--box-shadow-soft);
+  aspect-ratio: 16 / 10;
 }
 
-.testimonials-section-v2 .section-title {
-  color: var(--primary-color-dark-blue);
+.featured-news-card.carousel,
+.featured-news-card .carousel-inner,
+.featured-news-card .carousel-item {
+  height: 100%;
 }
 
-.testimonials-section-v2 .section-intro {
+.carousel-item .card-img-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.carousel-item .card-img-bgiym10 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.carousel-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 60%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.carousel-item .card-overlay-content {
+  position: relative;
+  z-index: 3;
+  padding: 1.5rem 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card-overlay-content .news-category-tag {
+  display: inline-block;
+  background-color: var(--primary-color-orange);
+  color: var(--neutral-color-white);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  align-self: flex-start;
+}
+
+.card-overlay-content .card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--neutral-color-white);
+  opacity: 0.3;
+}
+
+.card-overlay-content .card-title:hover {
+  opacity: 1;
+}
+
+.card-overlay-content .card-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.featured-news-card .carousel-control-prev,
+.featured-news-card .carousel-control-next {
+  z-index: 4;
+}
+
+.featured-news-card .carousel-indicators {
+  bottom: 15px;
+  z-index: 4;
+}
+.featured-news-card .carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(var(--neutral-color-white-rgb), 0.5);
+}
+.featured-news-card .carousel-indicators button.active {
+  background-color: var(--neutral-color-white);
+}
+
+/* Kartu Berita Utama (Kiri) */
+.featured-news-card {
+  position: relative;
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+  color: var(--neutral-color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  text-decoration: none;
+  transition: box-shadow var(--transition-speed) ease;
+  aspect-ratio: 16 / 9;
+}
+
+.featured-news-card:hover {
+  box-shadow: var(--box-shadow-medium);
+}
+
+.featured-news-card .card-img-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  transition: transform 0.4s ease;
+}
+
+.featured-news-card:hover .card-img-bg {
+  transform: scale(1.03);
+}
+
+.featured-news-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 70%);
+  z-index: 2;
+}
+
+.featured-news-card .card-overlay-content {
+  position: relative;
+  z-index: 3;
+  padding: 1.5rem 2rem;
+}
+
+.featured-news-card .news-category-tag {
+  display: inline-block;
+  background-color: var(--primary-color-orange);
+  color: var(--neutral-color-white);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.featured-news-card .card-title {
+  bottom: 90px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--neutral-color-white);
+  margin: 0;
+  margin-bottom: 0.85rem;
+}
+
+/* Kartu Berita Sekunder (Kanan) - Horizontal & Ringkas */
+.secondary-news-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--neutral-color-white);
+  border-radius: var(--border-radius-base);
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  border: 1px solid var(--border-color, #e9ecef);
+  transition: box-shadow var(--transition-speed) ease;
+}
+
+.secondary-news-card:hover {
+  box-shadow: var(--box-shadow-soft);
+}
+
+.secondary-news-card .card-image {
+  width: 100px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.secondary-news-card .card-image img {
+  border-radius: var(--border-radius-base);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.secondary-news-card .card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.secondary-news-card .card-title {
+  font-size: 1rem;
   font-weight: 600;
-  letter-spacing: 1px;
+  color: var(--text-color-dark);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.secondary-news-card .card-action-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-color-orange);
+  margin-top: auto;
+}
+
+.secondary-news-card .card-action-link .fas {
+  font-size: 0.75rem;
+}
+
+/* Link "Lihat Semua" di kanan bawah */
+.arrow-link {
+  color: var(--primary-color-dark-blue);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  align-self: flex-end;
+  transition: color var(--transition-speed) ease;
+}
+.arrow-link:hover {
   color: var(--primary-color-orange);
 }
-
-.testimonial-card-v3 {
-  background-color: var(--neutral-color-white);
-  border: 1px solid #e9ecef;
-  color: #343a40;
-  height: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial-card-v3:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--box-shadow-large);
-}
-
-.testimonial-photo-v2 {
-  border: 3px solid var(--primary-color-dark-blue);
-}
-
-/* Sembunyikan semua kartu testimoni secara default */
-.testimonial-item {
-  display: none;
+.arrow-link .fas {
+  margin-left: 0.5rem;
 }
 
 /* =============================================
    Komponen: Testimoni Mitra
    ============================================= */
 
-.partner-testimonial-section-v4 {
+/* .partner-testimonial-section-v4 {
   padding: 5rem 0;
   background-color: var(--neutral-color-white);
 }
@@ -670,7 +892,7 @@ h6 {
   box-shadow: var(--box-shadow-soft);
   display: flex;
   flex-direction: column;
-  align-items: center; /* Membuat semua konten terpusat */
+  align-items: center;
   text-align: center;
   width: 100%;
   height: 100%;
@@ -702,10 +924,10 @@ h6 {
   position: relative;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
-}
+} */
 
 /* Garis oranye dekoratif di bawah nama */
-.partner-card-v4 .partner-name::after {
+/* .partner-card-v4 .partner-name::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -722,7 +944,8 @@ h6 {
   color: var(--text-color-muted);
   line-height: 1.7;
   margin: 0;
-}
+} */
+
 /* Partner Logo Carousel (Halaman Utama)
    =================================================================== */
 .partner-carousel-section {
@@ -768,6 +991,24 @@ h6 {
   transform: scale(1.1);
 }
 
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 /* Call To Action (CTA) Section
    =================================================================== */
 .cta-section {
@@ -777,28 +1018,6 @@ h6 {
 
 .cta-section .btn {
   margin: 0.5rem;
-}
-
-/* Banner Halaman (Umum)
-   =================================================================== */
-.page-banner {
-  background-color: var(--primary-color-dark-blue);
-  color: var(--neutral-color-white);
-  padding: 60px 0;
-  margin-bottom: 0;
-}
-
-.page-banner h1 {
-  color: var(--neutral-color-white);
-  font-size: 2.8rem;
-  font-weight: 700;
-}
-
-.page-banner .lead {
-  color: rgba(var(--neutral-color-white-rgb), 0.85);
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: 10px auto 0 auto;
 }
 
 /* Kartu Program (Halaman Program)
@@ -868,32 +1087,6 @@ h6 {
    ============================================= */
 
 /* --- Banner Halaman dengan Latar Belakang Gambar --- */
-.page-banner-with-bg {
-  position: relative;
-  padding: 15rem 0;
-  background-image: url("images/Latar-belakang-pages.png");
-  background-size: cover;
-  background-position: center;
-  color: var(--neutral-color-white);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.page-banner-with-bg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* Menggunakan variabel warna utama dengan opacity */
-  background-color: rgba(var(--primary-color-dark-blue-rgb), 0.6);
-  z-index: 1;
-}
-
-.page-banner-with-bg .container {
-  position: relative;
-  z-index: 2;
-}
 
 /* --- Timeline Sejarah --- */
 .history-timeline-section {
@@ -960,6 +1153,54 @@ h6 {
 
 .timeline-content h3 {
   color: var(--primary-color-dark-blue);
+}
+
+/* Fokus kami */
+
+.values-section {
+  padding: 5rem 0;
+  background-color: var(--neutral-color-light-gray);
+}
+
+.value-item {
+  background-color: var(--neutral-color-white);
+  border: 1px solid var(--border-color, #e9ecef);
+  border-radius: var(--border-radius-large);
+  padding: 2.5rem 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: var(--box-shadow-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--box-shadow-medium);
+}
+
+.value-item .fas {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color-orange);
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-item h3 {
+  color: var(--primary-color-dark-blue);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.value-item p {
+  color: var(--text-color-muted);
+  line-height: 1.6;
 }
 
 /* =============================================
@@ -1054,23 +1295,37 @@ h6 {
   flex-direction: column;
 }
 
-.team-member-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--box-shadow-medium);
+.team-member-card .member-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(1.2);
+  transition: transform 0.5s ease;
 }
 
-.team-member-card .member-photo {
-  width: 140px; /* Ukuran disesuaikan agar lebih ringkas */
+.team-member-card .member-photo-wrapper {
+  width: 140px;
   height: 140px;
   border-radius: 50%;
-  object-fit: cover;
   margin: 1.5rem auto 1rem;
   border: 3px solid var(--neutral-color-light-gray);
   box-shadow: var(--box-shadow-soft);
+  overflow: hidden;
+  position: relative;
+}
+
+.team-member-card .new-member-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.2);
+  transition: transform 0.5s ease;
 }
 
 .team-member-card .card-body {
-  padding: 0 1.25rem 1.5rem; /* Padding disesuaikan */
+  padding: 0 1.25rem 1.5rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -1079,7 +1334,7 @@ h6 {
 .team-member-card .member-name {
   font-weight: 700;
   font-size: 1.1rem;
-  color: var(--neutral-color-dark-gray); /* Default untuk Staff (putih dengan border) */
+  color: var(--neutral-color-dark-gray);
 }
 
 .team-member-card .member-role {
@@ -1102,7 +1357,7 @@ h6 {
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
-  min-height: 300px; /* Tinggi minimum yang lebih besar */
+  min-height: 300px;
 }
 
 .founder-card-v2:hover {
@@ -1111,10 +1366,10 @@ h6 {
 }
 
 .founder-card-v2 .founder-info {
-  flex-grow: 1; /* Membuat bagian info mengisi ruang yang tersedia */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Memusatkan konten secara vertikal */
+  justify-content: center;
 }
 
 .founder-card-v2 .member-name {
@@ -1135,22 +1390,22 @@ h6 {
   font-style: italic;
   color: rgba(var(--neutral-color-white-rgb), 0.8);
   line-height: 1.4;
-  min-height: 3.2em; /* Memberikan ruang untuk maksimal 2-3 baris teks */
+  min-height: 3.2em;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem; /* spacing konsisten */
+  margin-bottom: 1rem;
 }
 
 /* Bagian ikon sosial media */
 .founder-card-v2 .member-socials {
   border-top: 1px solid rgba(var(--neutral-color-white-rgb), 0.2);
   padding-top: 1.5rem;
-  margin-top: auto; /* Mendorong blok ini ke paling bawah */
+  margin-top: auto;
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  flex-shrink: 0; /* Mencegah bagian ini menyusut */
+  flex-shrink: 0;
 }
 
 .founder-card-v2 .member-socials a {
@@ -1178,7 +1433,7 @@ h6 {
   color: rgba(255, 255, 255, 0.85);
 }
 
-.team-member-card.card-top-executive .member-photo {
+.team-member-card.card-top-executive .member-photo-wrapper {
   border-color: var(--neutral-color-white);
 }
 
@@ -1204,73 +1459,12 @@ h6 {
 }
 
 .team-member-card.card-volunteer .member-role {
-  color: var(--secondary-color-dark-gray);
+  border-color: #7ba7bc;
   font-weight: 400;
 }
 
-.team-member-card.card-volunteer .member-photo {
-  border-color: #7ba7bc; /* Border foto sesuai warna volunteer */
-}
-
-/* =============================================
-   Komponen Halaman: Alumni
-   ============================================= */
-
-/* --- Bagian Angka Dampak (Impact Numbers) --- */
-.impact-numbers-section {
-  padding: 5rem 0;
-  background-color: var(--primary-color-dark-blue);
-  color: var(--neutral-color-white);
-}
-
-.impact-number-item {
-  text-align: center;
-}
-
-.impact-number-item .icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: var(--accent-color-yellow-orange);
-}
-
-.impact-number-item .counter {
-  font-size: 3.5rem;
-  font-weight: bold;
-}
-
-.impact-number-item .label {
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-/* --- Bagian Testimoni Video --- */
-.video-testimonial-section {
-  padding: 5rem 0;
-  background-color: var(--neutral-color-off-white);
-}
-
-.video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-  height: 0;
-  overflow: hidden;
-  border-radius: var(--border-radius-large);
-  box-shadow: var(--box-shadow-large);
-  background-color: #000;
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-.video-caption {
-  font-weight: bold;
-  color: var(--primary-color-dark-blue);
+.team-member-card.card-volunteer .member-photo-wrapper {
+  border-color: #7ba7bc;
 }
 
 /* --- Bagian Kartu Testimoni Alumni (Revisi Profesional) --- */
@@ -1289,7 +1483,6 @@ h6 {
   border-color: var(--primary-color-orange) !important;
 }
 
-/* --- Opsi Desain 3: Kartu Alumni Klasik Terpusat --- */
 .alumni-card-classic {
   background-color: var(--neutral-color-white);
   border-radius: 8px;
@@ -1308,16 +1501,37 @@ h6 {
   border-color: var(--primary-color-orange);
 }
 
-.alumni-card-classic .alumni-photo {
-  width: 90px;
-  height: 90px;
+.alumni-card-classic .member-photo-wrapper {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  object-fit: cover;
   margin-bottom: 1rem;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--neutral-color-light-gray);
+}
+
+.alumni-card-classic .alumni-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 25%;
+  transform: scale(1.2);
+  transition: transform 0.4s ease;
+}
+
+.alumni-card-classic .firman-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.7);
+  transition: transform 0.4s ease;
 }
 
 .alumni-card-classic .alumni-name {
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 1.1rem;
   color: var(--primary-color-dark-blue);
   margin-bottom: 0.25rem;
 }
@@ -1348,6 +1562,34 @@ h6 {
   color: var(--text-color-dark);
   font-style: italic;
   flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: calc(1.6 * 0.95rem * 3);
+}
+
+/* Gaya untuk konten di dalam Modal */
+.modal-alumni-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  float: left;
+  margin-top: 0.8rem;
+  margin-left: 1rem;
+  margin-right: 1.5rem;
+  margin-bottom: 0.5rem;
+  transform: scale(1.4);
+  overflow: hidden;
+}
+
+.paraghraph-alumni-quote {
+  font-size: 0.91rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
 }
 
 /* =============================================
@@ -1355,7 +1597,7 @@ h6 {
    ============================================= */
 
 /* --- Bagian Statistik Dampak --- */
-.impact-stats-section {
+/* .impact-stats-section {
   background-color: var(--primary-color-dark-blue);
   color: var(--neutral-color-white);
 }
@@ -1379,7 +1621,7 @@ h6 {
 .impact-stat .stat-label {
   font-size: 1rem;
   opacity: 0.9;
-}
+} */
 
 /* --- Variasi Gambar Intro --- */
 .intro-section .intro-image {
@@ -1419,7 +1661,7 @@ h6 {
 .back-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem; /* Jarak antara ikon dan teks */
+  gap: 0.4rem; /* Jarak antara ikon dan teks */
   font-weight: 600;
   color: var(--text-color-muted);
   text-decoration: none;
@@ -1429,7 +1671,7 @@ h6 {
 .back-link:hover {
   color: var(--primary-color-orange);
   text-decoration: none;
-  opacity: 1; /* Override opacity hover default pada <a> */
+  opacity: 1;
 }
 
 .back-link i {
@@ -1437,72 +1679,58 @@ h6 {
 }
 
 .back-link:hover i {
-  transform: translateX(-3px); /* Efek ikon sedikit bergeser saat hover */
+  transform: translateX(-3px);
 }
 
-/* --- 1. Hero Section --- */
-.program-hero-v2 {
+.page-hero {
   position: relative;
-  padding: 2rem 0; /* Padding disesuaikan */
-  background-size: cover;
-  background-position: center;
+  padding: 8rem 0;
+  color: var(--neutral-color-white);
   display: flex;
   align-items: center;
-  min-height: 50vh; /* Dibuat lebih tinggi untuk dampak visual */
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  min-height: 600px;
 }
 
-/* PERBAIKAN: Overlay menggunakan gradien, bukan gambar */
-.program-hero-v2 .program-hero-overlay {
+.page-hero .hero-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.page-hero::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("images/fotbaryvc3.JPG"); /* Ganti dengan path lokal Anda */
-  background-size: cover;
-  background-position: center 40%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 30vh;
-}
-
-.program-hero-v2 .container {
-  position: relative;
+  background-color: rgba(var(--primary-color-dark-blue-rgb), 0.6);
   z-index: 2;
 }
 
+/* 4. Konten Teks */
+.page-hero .container {
+  position: relative;
+  z-index: 3;
+}
 .program-hero-v2 h1 {
   font-size: 3.8rem;
-  font-weight: 800; /* Dibuat lebih tebal */
+  font-weight: 800;
   text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 }
 
 .program-hero-v2 .lead {
-  font-size: 1.1rem; /* Sedikit diperkecil agar fokus ke judul */
+  font-size: 1.1rem;
   font-weight: 400;
   opacity: 0.95;
   letter-spacing: 0.5px;
-}
-
-/* --- 2. Statistik Kunci di Hero (BARU) --- */
-.hero-stats {
-  border-top: 1px solid rgba(var(--neutral-color-white-rgb), 0.2);
-  border-bottom: 1px solid rgba(var(--neutral-color-white-rgb), 0.2);
-  padding: 1.5rem 0;
-}
-
-.hero-stat-item .stat-number {
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
-.hero-stat-item .stat-label {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  opacity: 0.8;
 }
 
 .page-section {
@@ -1778,12 +2006,12 @@ ul.list-styled-v2 i {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
 }
 
-.profile-img {
+/* .profile-img {
   width: 56px;
   height: 56px;
   object-fit: cover;
   border: 2px solid var(--primary-color-orange);
-}
+} */
 
 .map-responsive {
   overflow: hidden;
@@ -1808,26 +2036,12 @@ ul.list-styled-v2 i {
    Komponen Halaman: Detail Program (Scale Up)
    ============================================= */
 
-/* 1. Hero Section */
-.scaleup-hero {
-  background: linear-gradient(to right, rgba(9, 65, 98, 0.9), rgba(9, 65, 98, 0.7)), url("images/fotbaryvc3.JPG") center/cover no-repeat;
-  padding: 9rem 0;
-  color: var(--neutral-color-white);
-}
-
-.scaleup-hero .hero-content {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* 2. Tentang Program */
 .scaleup-about .section-title {
   color: var(--primary-color-dark-blue);
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-/* 3. Highlight Card */
 .scaleup-highlight .highlight-card i {
   color: var(--primary-color-orange);
 }
@@ -1837,7 +2051,6 @@ ul.list-styled-v2 i {
   color: var(--primary-color-dark-blue);
 }
 
-/* SCALE UP 2023 */
 .scaleup-filter-tabs {
   display: flex;
   justify-content: center;
@@ -1914,42 +2127,6 @@ ul.list-styled-v2 i {
 .page-section-scope {
   margin-top: 50px;
   background-color: var(--neutral-color-off-white);
-}
-
-.page-section-v2 {
-  padding: 5rem 0;
-  background-color: var(--neutral-color-light-gray);
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-}
-
-/* Sedikit penyesuaian pada kartu aktivitas agar lebih menonjol */
-.page-section-v2 .activity-card {
-  background-color: var(--neutral-color-white);
-  border: 1px solid transparent; /* Hapus border default agar lebih bersih */
-  box-shadow: var(--box-shadow-soft);
-  /* Sedikit modifikasi pada padding untuk ruang lebih */
-  padding: 2.5rem 2rem;
-}
-
-/* Efek hover yang lebih jelas */
-.page-section-v2 .activity-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--box-shadow-medium);
-}
-
-.page-section-v2 .activity-card .activity-title {
-  margin-top: 1rem;
-  color: var(--primary-color-dark-blue);
-}
-
-/* Penyesuaian pada judul section di dalam .page-section-v2 */
-.page-section-v2 .section-title {
-  margin-bottom: 1rem;
-}
-
-.page-section-v2 .section-intro {
-  font-size: 1.1rem;
 }
 
 /* Gaya untuk konten di dalam Modal */
@@ -2045,86 +2222,139 @@ ul.partner-list-v2 li i {
    Komponen Halaman: Berita & Media
    ============================================= */
 
-/* --- Bagian Featured Podcast --- */
-.featured-podcast-section {
-  padding: 5rem 0;
-  background-color: var(--neutral-color-off-white);
-}
-
-.podcast-card-revised {
-  display: flex;
-  align-items: center;
+.news-section {
   background-color: var(--neutral-color-white);
-  border-radius: 12px;
-  box-shadow: var(--box-shadow-large);
-  padding: 1rem;
 }
 
-.podcast-card-revised .podcast-image {
-  width: 150px;
-  height: 150px;
+/* Kartu Berita Utama (Besar) */
+.featured-news-card-large {
+  position: relative;
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+  color: var(--neutral-color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  min-height: 450px; /* Memberi tinggi minimum agar tidak terlalu pendek */
+  text-decoration: none;
+  transition: box-shadow var(--transition-speed) ease;
+}
+.featured-news-card-large:hover {
+  box-shadow: var(--box-shadow-medium);
+}
+.featured-news-card-large .card-img-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 8px;
-  flex-shrink: 0;
+  z-index: 1;
+  transition: transform 0.4s ease;
+}
+.featured-news-card-large:hover .card-img-bg {
+  transform: scale(1.03);
+}
+.featured-news-card-large::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 70%);
+  z-index: 2;
+}
+.featured-news-card-large .card-overlay-content {
+  position: relative;
+  z-index: 3;
+  padding: 2rem 2.5rem;
+}
+.featured-news-card-large .card-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--neutral-color-white);
+  margin-bottom: 0.5rem;
+}
+.featured-news-card-large .card-excerpt {
+  font-size: 1rem;
+  opacity: 0.9;
+  max-width: 80%; /* Agar tidak terlalu lebar */
 }
 
-.podcast-card-revised .podcast-content {
-  padding: 0 2rem;
-}
-
-.podcast-card-revised .btn {
-  font-weight: bold;
-  padding: 0.75rem 1.5rem;
-}
-
-/* --- Grid Berita --- */
-.news-grid-section {
-  padding-top: 2rem;
-  padding-bottom: 5rem;
-}
-
+/* Kartu Berita Sekunder (Grid) */
 .news-card {
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid #e9ecef;
-  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  border: 1px solid var(--border-color, #e9ecef);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
-
 .news-card:hover {
   transform: translateY(-8px);
-  box-shadow: var(--box-shadow-large);
+  box-shadow: var(--box-shadow-medium);
 }
-
 .news-card .news-card-img {
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
-
 .news-card .card-body {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
-
 .news-card .news-title {
   color: var(--primary-color-dark-blue);
   font-weight: bold;
   font-size: 1.1rem;
 }
-
 .news-card .news-excerpt {
   font-size: 0.9rem;
   color: var(--text-color-muted);
   flex-grow: 1;
 }
-
 .news-card .card-footer {
   background-color: var(--neutral-color-white);
-  border-top: 1px solid #e9ecef;
+  border-top: 1px solid var(--border-color, #e9ecef);
   font-size: 0.8rem;
+}
+
+/* Kategori Badge */
+.news-category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3em 0.8em;
+}
+
+.news-card .news-date {
+  font-weight: 500;
+}
+
+.bg-primary-orange {
+  background-color: var(--primary-color-orange) !important;
+}
+.bg-accent-blue {
+  background-color: var(--accent-color-medium-blue) !important;
+}
+.bg-accent-yellow {
+  background-color: var(--accent-color-yellow-orange) !important;
+}
+
+.bg-secondary-dark-blue {
+  background-color: var(--primary-color-dark-blue) !important;
+}
+
+/* Sembunyikan semua item berita secara default */
+.news-item {
+  display: none;
+}
+
+/* Tampilkan item yang memiliki class 'active' dari JavaScript */
+.news-item.active {
+  display: block;
 }
 
 /* --- Seksi Promo Laporan Tahunan --- */
@@ -2209,65 +2439,103 @@ ul.partner-list-v2 li i {
 /* =============================================
    Komponen Halaman: Arsip Laporan (Slider Horizontal)
    ============================================= */
-.archive-section {
+
+.report-archive-v2 {
+  padding: 5rem 0;
   background-color: var(--neutral-color-light-gray);
-  padding: 80px 0;
-  overflow: hidden;
+  overflow: hidden; /* Mencegah tombol slider keluar dari batas */
 }
 
+/* Mekanisme Slider */
 .archive-container {
   position: relative;
 }
-
 .archive-wrapper {
   display: flex;
   gap: 20px;
-  padding: 20px 10px; /* Padding agar shadow tidak terpotong */
+  padding: 20px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scrollbar-width: none; /* Sembunyikan scrollbar untuk Firefox */
-  -ms-overflow-style: none; /* Sembunyikan scrollbar untuk IE/Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
-
-/* Sembunyikan scrollbar untuk Chrome/Safari/Opera */
 .archive-wrapper::-webkit-scrollbar {
   display: none;
 }
 
-.archive-wrapper .report-card {
-  flex: 0 0 280px;
+/* Wrapper untuk setiap kartu di dalam slider */
+.report-card-wrapper {
+  flex: 0 0 300px; /* Menetapkan lebar setiap item di slider */
   scroll-snap-align: start;
-  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+/* Gaya Kartu Elegan (yang Anda sukai) */
+.report-showcase-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+  color: var(--neutral-color-white);
+  text-decoration: none;
+  height: 100%;
+  aspect-ratio: 3 / 4;
+  box-shadow: var(--box-shadow-soft);
+  transition: all 0.3s ease;
+}
+.report-showcase-card:hover {
+  transform: translateY(-8px);
   box-shadow: var(--box-shadow-medium);
-  background-color: var(--neutral-color-white);
-  border-radius: 8px;
 }
-
-.archive-wrapper .report-card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--box-shadow-large);
+.report-showcase-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 60%);
+  z-index: 2;
+  transition: background 0.3s ease;
 }
-
-.archive-wrapper .report-card .card-content {
-  padding: 20px;
+.report-showcase-card:hover::before {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 70%);
+}
+.report-showcase-card .card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.report-showcase-card .card-content {
+  position: relative;
+  z-index: 3;
+  padding: 1.5rem;
   text-align: center;
 }
-
-.archive-wrapper .report-card img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 8px 8px 0 0;
+.report-showcase-card .year-tag {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
 }
-
-.archive-wrapper .report-card h4 {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
-  color: var(--primary-color-dark-blue);
+.report-showcase-card .card-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: rgba(var(--neutral-color-white-rgb), 0.9);
 }
-
-.archive-wrapper .report-card a {
-  font-weight: 600;
+.report-showcase-card .btn {
+  border-color: rgba(var(--neutral-color-white-rgb), 0.5);
+  color: rgba(var(--neutral-color-white-rgb), 0.9);
+}
+.report-showcase-card:hover .btn {
+  background-color: var(--primary-color-orange);
+  border-color: var(--primary-color-orange);
+  color: var(--neutral-color-white);
 }
 
 /* Tombol Navigasi Slider */
@@ -2276,31 +2544,33 @@ ul.partner-list-v2 li i {
   top: 50%;
   transform: translateY(-50%);
   z-index: 20;
-  background-color: var(--neutral-color-white);
+  background-color: white;
   color: var(--primary-color-dark-blue);
   border: none;
   border-radius: 50%;
   width: 50px;
   height: 50px;
   font-size: 1.2rem;
-  box-shadow: var(--box-shadow-medium);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
 }
-
+@media (min-width: 992px) {
+  .slider-nav {
+    display: flex;
+  }
+}
 .slider-nav:hover {
   background-color: var(--primary-color-dark-blue);
-  color: var(--neutral-color-white);
+  color: white;
   transform: translateY(-50%) scale(1.05);
 }
-
 .slider-nav.prev {
   left: 20px;
 }
-
 .slider-nav.next {
   right: 20px;
 }
@@ -2397,11 +2667,6 @@ ul.partner-list-v2 li i {
 /* Gaya khusus untuk body di halaman kemitraan */
 body.partnership-page {
   background-color: var(--neutral-color-off-white);
-}
-
-/* Modifier Class untuk Banner Halaman Kemitraan */
-.page-banner-with-bg.gradient-partnership::before {
-  background: linear-gradient(45deg, rgba(var(--primary-color-dark-blue-rgb), 0.7), rgba(246, 174, 45, 0.5));
 }
 
 /* --- Bagian Keuntungan Kemitraan --- */
@@ -2571,43 +2836,6 @@ body.partnership-page {
 
 /* Halaman Laporan Tahunan
    =================================================================== */
-.report-banner {
-  position: relative;
-  margin-top: 10px;
-  padding: 6rem 0;
-  background-image: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop");
-  background-size: cover;
-  background-position: center;
-  color: var(--neutral-color-white);
-  text-align: center;
-}
-
-.report-banner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(var(--primary-color-dark-blue-rgb), 0.75);
-}
-
-.report-banner .container {
-  position: relative;
-  z-index: 2;
-}
-
-.report-banner h1 {
-  color: var(--neutral-color-white);
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.report-banner p {
-  max-width: 800px;
-  margin: 0 auto;
-  opacity: 0.9;
-}
 
 .featured-report-section {
   padding: 80px 0;
@@ -2701,89 +2929,9 @@ body.partnership-page {
   opacity: 0.9;
 }
 
-/* Coverflow Archive Slider (Laporan Tahunan)
-   =================================================================== */
-.coverflow-archive-section {
-  background-color: var(--neutral-color-light-gray);
-  padding: 80px 0;
-  overflow-x: clip; /* Menggantikan overflow: hidden */
-}
-
-.coverflow-container {
-  position: relative;
-}
-
-.coverflow-wrapper {
-  display: flex;
-  gap: 20px;
-  padding: 70px 0;
-  overflow-x: auto;
-  /* Trik padding untuk menengahkan item pertama dan terakhir */
-  padding-left: calc(50% - 140px);
-  padding-right: calc(50% - 140px);
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  /* Mendefinisikan timeline untuk animasi scroll */
-  scroll-timeline-name: --archive-scroll-timeline;
-  scroll-timeline-axis: inline;
-}
-
-.coverflow-wrapper::-webkit-scrollbar {
-  display: none;
-}
-
-.coverflow-wrapper .report-card {
-  flex: 0 0 280px;
-  scroll-snap-align: center;
-  animation: linear arc-up-animation; /* Animasi diterapkan */
-  animation-timeline: --archive-scroll-timeline; /* Animasi mengikuti scroll */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  background-color: var(--neutral-color-white);
-  border-radius: 8px;
-}
-
-.coverflow-wrapper .report-card:hover {
-  transform: translateY(-75px) scale(1.03);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  z-index: 10;
-}
-
-.coverflow-wrapper .report-card .card-content {
-  padding: 20px;
-  text-align: center;
-}
-
-.coverflow-wrapper .report-card img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 8px 8px 0 0;
-}
-
-.coverflow-wrapper .report-card h4 {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
-  color: var(--primary-color-dark-blue);
-}
-
-.coverflow-wrapper .report-card a {
-  font-weight: 600;
-}
-
 /* =============================================
    Gaya Halaman Kontak
    ============================================= */
-
-.contact-page .page-banner {
-  background-color: var(--primary-color-dark-blue);
-  color: var(--neutral-color-white);
-}
-
-.contact-page .page-banner h1 {
-  color: var(--neutral-color-white);
-}
 
 .contact-item .contact-label {
   font-size: 1.1rem;
@@ -2871,20 +3019,6 @@ body.partnership-page {
   color: rgba(var(--neutral-color-white-rgb), 0.85);
   padding-top: 3.5rem;
   padding-bottom: 1.5rem;
-}
-
-#footer .partner-sponsor-carousel {
-  border-bottom: 1px solid rgba(var(--neutral-color-white-rgb), 0.1);
-}
-
-#footer .logos-container img {
-  max-height: 45px;
-  filter: grayscale(80%) opacity(0.8);
-  transition: filter var(--transition-speed) ease;
-}
-
-#footer .logos-container img:hover {
-  filter: grayscale(0%) opacity(1);
 }
 
 #footer .footer-content h4 {
@@ -3180,7 +3314,6 @@ body.partnership-page {
 .stat-number {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--primary-color-dark-blue);
   display: block;
 }
 
@@ -3248,10 +3381,6 @@ body.partnership-page {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-.fade-in-section.is-visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .section-title-underline {

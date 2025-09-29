@@ -26,9 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- Active Link Highlighting (VERSI BARU & LEBIH BAIK) ---
     const currentPath = window.location.pathname; // Contoh: "/tentang-iyes/tentang-kami.html"
-    const navLinks = document.querySelectorAll(
-      ".nav-links > .nav-item > .nav-link"
-    );
+    const navLinks = document.querySelectorAll(".nav-links > .nav-item > .nav-link");
 
     // Hapus semua class aktif terlebih dahulu untuk reset
     navLinks.forEach((link) => {
@@ -117,7 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const iso = new Isotope(grid, {
         itemSelector: ".testimonial-item",
         layoutMode: "fitRows",
-        // Atur agar item yang tampil (visible) yang di-layout
         visibleStyle: { display: "block", opacity: 1 },
         hiddenStyle: { display: "none", opacity: 0 },
       });
@@ -145,9 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Cek visibilitas tombol
       function checkButtonVisibility() {
-        const currentFilter = filterButtons
-          .querySelector(".active")
-          .getAttribute("data-filter");
+        const currentFilter = filterButtons.querySelector(".active").getAttribute("data-filter");
         if (currentFilter !== "*") {
           loadMoreBtn.style.display = "none";
           showLessBtn.style.display = "none";
@@ -262,12 +257,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (slider && prevButton && nextButton) {
       const scrollAmount = 300;
-      nextButton.addEventListener("click", () =>
-        slider.scrollBy({ left: scrollAmount, behavior: "smooth" })
-      );
-      prevButton.addEventListener("click", () =>
-        slider.scrollBy({ left: -scrollAmount, behavior: "smooth" })
-      );
+      nextButton.addEventListener("click", () => slider.scrollBy({ left: scrollAmount, behavior: "smooth" }));
+      prevButton.addEventListener("click", () => slider.scrollBy({ left: -scrollAmount, behavior: "smooth" }));
     }
   }
 
@@ -276,9 +267,7 @@ document.addEventListener("DOMContentLoaded", () => {
    */
   function handleProgramFilter() {
     const filterContainer = document.querySelector(".program-filters");
-    const programItems = document.querySelectorAll(
-      "#program-grid .program-item"
-    );
+    const programItems = document.querySelectorAll("#program-grid .program-item");
 
     if (filterContainer && programItems.length > 0) {
       filterContainer.addEventListener("click", function (e) {
@@ -292,10 +281,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         programItems.forEach((item) => {
           const itemCategory = item.getAttribute("data-category");
-          if (
-            filterValue === "*" ||
-            (itemCategory && itemCategory.includes(filterValue))
-          ) {
+          if (filterValue === "*" || (itemCategory && itemCategory.includes(filterValue))) {
             item.style.display = "block";
           } else {
             item.style.display = "none";
@@ -340,6 +326,74 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  /**
+   * Mengatur fungsionalitas paginasi untuk grid berita.
+   */
+  function handleNewsPagination() {
+    const grid = document.getElementById("newsGrid");
+    const paginationWrapper = document.getElementById("pagination-wrapper");
+
+    if (!grid || !paginationWrapper) {
+      return; // Keluar jika elemen tidak ada di halaman ini
+    }
+
+    const items = Array.from(grid.querySelectorAll(".news-item"));
+    const itemsPerPage = 8; // Tampilkan 8 berita per halaman
+
+    if (items.length <= itemsPerPage) {
+      items.forEach((item) => item.classList.add("active"));
+      return;
+    }
+
+    const pageCount = Math.ceil(items.length / itemsPerPage);
+    let currentPage = 1;
+
+    function displayPage(page) {
+      currentPage = page;
+
+      items.forEach((item) => item.classList.remove("active"));
+
+      const startIndex = (page - 1) * itemsPerPage;
+      const endIndex = startIndex + itemsPerPage;
+
+      items.slice(startIndex, endIndex).forEach((item) => item.classList.add("active"));
+
+      renderButtons();
+
+      const newsSection = document.getElementById("news-content");
+      if (newsSection) {
+        newsSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
+    function renderButtons() {
+      paginationWrapper.innerHTML = "";
+
+      for (let i = 1; i <= pageCount; i++) {
+        const li = document.createElement("li");
+        li.className = "page-item";
+        if (i === currentPage) {
+          li.classList.add("active");
+        }
+
+        const a = document.createElement("a");
+        a.className = "page-link";
+        a.href = "#";
+        a.innerText = i;
+
+        a.addEventListener("click", (e) => {
+          e.preventDefault();
+          displayPage(i);
+        });
+
+        li.appendChild(a);
+        paginationWrapper.appendChild(li);
+      }
+    }
+
+    displayPage(1);
+  }
+
   // =============================================
   // BAGIAN 3: EKSEKUSI SEMUA FUNGSI
   // =============================================
@@ -351,6 +405,7 @@ document.addEventListener("DOMContentLoaded", () => {
   handleTestimonialGallery();
   handleArchiveSlider();
   handleProgramFilter();
+  handleNewsPagination();
 });
 
 // ===================================================================
@@ -468,78 +523,4 @@ document.addEventListener("DOMContentLoaded", function () {
       slider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
     });
   }
-});
-
-// ===================================================================
-// [BARU] fitur ubah bahasa indonesia dan inggris
-// ===================================================================
-function handleLanguageSwitcher() {
-  const langIdButton = document.getElementById("lang-id");
-  const langEnButton = document.getElementById("lang-en");
-
-  // Fungsi untuk mendapatkan bahasa saat ini dari URL atau penyimpanan lokal
-  const getCurrentLanguage = () => {
-    const savedLang = localStorage.getItem("selectedLanguage");
-    // Jika URL mengandung .en.html, prioritaskan itu
-    if (window.location.pathname.endsWith(".en.html")) {
-      return "en";
-    }
-    // Jika tidak, gunakan bahasa yang tersimpan, atau default ke 'id'
-    return savedLang || "id";
-  };
-
-  // Fungsi untuk mengganti bahasa
-  const switchLanguage = (targetLang) => {
-    const currentLang = getCurrentLanguage();
-    if (currentLang === targetLang) return; // Tidak melakukan apa-apa jika bahasa sudah sama
-
-    localStorage.setItem("selectedLanguage", targetLang);
-    const currentPath = window.location.pathname;
-    let newPath;
-
-    if (targetLang === "en") {
-      // Mengubah dari ID ke EN: tambahkan .en sebelum .html
-      newPath = currentPath.replace(".html", ".en.html");
-    } else {
-      // Mengubah dari EN ke ID: hapus .en dari sebelum .html
-      newPath = currentPath.replace(".en.html", ".html");
-    }
-
-    // Atasi kasus khusus untuk halaman utama (index.html)
-    if (newPath.endsWith("/.en.html")) {
-      newPath = "/index.en.html";
-    } else if (currentPath.endsWith("/index.en.html") && targetLang === "id") {
-      newPath = "/index.html";
-    }
-
-    // Arahkan ke halaman baru
-    window.location.href = newPath;
-  };
-
-  // Fungsi untuk mengatur tampilan tombol ID/EN
-  const updateButtonState = () => {
-    const currentLang = getCurrentLanguage();
-    if (currentLang === "en") {
-      langEnButton.classList.add("active-lang");
-      langIdButton.classList.remove("active-lang");
-    } else {
-      langIdButton.classList.add("active-lang");
-      langEnButton.classList.remove("active-lang");
-    }
-  };
-
-  // Tambahkan event listener ke tombol
-  if (langIdButton && langEnButton) {
-    langIdButton.addEventListener("click", () => switchLanguage("id"));
-    langEnButton.addEventListener("click", () => switchLanguage("en"));
-  }
-
-  // Inisialisasi saat halaman dimuat
-  updateButtonState();
-}
-
-// Panggil fungsi baru ini di dalam blok eksekusi utama
-document.addEventListener("DOMContentLoaded", () => {
-  // ... (semua fungsi handle... Anda yang sudah ada) ...
-  handleLanguageSwitcher(); // <-- Tambahkan baris ini
 });
