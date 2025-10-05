@@ -69,7 +69,8 @@ body {
 a {
   color: var(--primary-color-orange);
   text-decoration: none;
-  transition: color var(--transition-speed) ease, opacity var(--transition-speed) ease;
+  transition: color var(--transition-speed) ease,
+    opacity var(--transition-speed) ease;
 }
 
 a:hover,
@@ -538,7 +539,11 @@ h6 {
    ============================================= */
 
 .featured-programs-v2 {
-  background: linear-gradient(180deg, var(--neutral-color-white) 0%, var(--neutral-color-off-white) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--neutral-color-white) 0%,
+    var(--neutral-color-off-white) 100%
+  );
 }
 
 .program-card-v2 {
@@ -668,7 +673,11 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 60%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 60%
+  );
   z-index: 2;
   pointer-events: none;
 }
@@ -773,7 +782,11 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 70%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
   z-index: 2;
 }
 
@@ -963,8 +976,20 @@ h6 {
   padding: 20px 0;
   background: transparent;
   position: relative;
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
-  mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 15%,
+    #000 85%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 15%,
+    #000 85%,
+    transparent
+  );
 }
 
 .logos-slide {
@@ -1055,7 +1080,11 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 60%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 60%
+  );
   z-index: 1;
   display: flex;
   align-items: flex-end;
@@ -1288,7 +1317,8 @@ h6 {
   text-align: center;
   border: 1px solid var(--border-color); /* Border default untuk staf */
   box-shadow: var(--box-shadow-soft);
-  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  transition: transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
   height: 100%;
   overflow: hidden;
   display: flex;
@@ -1493,7 +1523,8 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: box-shadow var(--transition-speed) ease, border-color var(--transition-speed) ease;
+  transition: box-shadow var(--transition-speed) ease,
+    border-color var(--transition-speed) ease;
 }
 
 .alumni-card-classic:hover {
@@ -1831,7 +1862,11 @@ ul.list-styled-v2 i {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 60%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0) 60%
+  );
   opacity: 0.8;
   transition: opacity 0.3s ease;
 }
@@ -2263,7 +2298,11 @@ ul.partner-list-v2 li i {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 70%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
   z-index: 2;
 }
 .featured-news-card-large .card-overlay-content {
@@ -2364,7 +2403,11 @@ ul.partner-list-v2 li i {
 }
 
 .report-promo-card {
-  background: linear-gradient(to right, var(--primary-color-dark-blue), var(--accent-color-medium-blue));
+  background: linear-gradient(
+    to right,
+    var(--primary-color-dark-blue),
+    var(--accent-color-medium-blue)
+  );
   border-radius: 12px;
   color: var(--neutral-color-white);
   padding: 2.5rem;
@@ -2495,12 +2538,20 @@ ul.partner-list-v2 li i {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 60%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 60%
+  );
   z-index: 2;
   transition: background 0.3s ease;
 }
 .report-showcase-card:hover::before {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 70%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
 }
 .report-showcase-card .card-img {
   position: absolute;
@@ -2588,7 +2639,8 @@ ul.partner-list-v2 li i {
   background-color: var(--neutral-color-white);
   border-radius: 15px; /* Bisa dibuat variabel jika ingin konsisten */
   box-shadow: var(--box-shadow-medium);
-  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  transition: transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -2681,7 +2733,8 @@ body.partnership-page {
   border: 1px solid #e9ecef;
   border-radius: 12px;
   height: 100%;
-  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  transition: transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
 }
 
 .benefit-card:hover {
@@ -2777,7 +2830,11 @@ body.partnership-page {
 /* --- Bagian Jembatan Emosional (Next Story) --- */
 .next-story-section {
   padding: 5rem 0;
-  background: linear-gradient(45deg, var(--primary-color-dark-blue), var(--accent-color-medium-blue));
+  background: linear-gradient(
+    45deg,
+    var(--primary-color-dark-blue),
+    var(--accent-color-medium-blue)
+  );
   color: var(--neutral-color-white);
 }
 
@@ -3061,7 +3118,8 @@ body.partnership-page {
   color: rgba(var(--neutral-color-white-rgb), 0.75);
   font-size: 1.5rem;
   margin-right: 18px;
-  transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
+  transition: color var(--transition-speed) ease,
+    transform var(--transition-speed) ease;
 }
 
 #footer .footer-social-media a:hover {
@@ -3083,6 +3141,16 @@ body.partnership-page {
 
 #footer .footer-bottom a:hover {
   color: var(--primary-color-orange);
+}
+/* ============================================= */
+/* PERBAIKAN: Posisi Garis Oranye di Footer Mobile */
+/* ============================================= */
+
+@media (max-width: 991.98px) {
+  #footer .footer-content .text-center h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 /* Tombol Scroll ke Atas
@@ -3532,4 +3600,411 @@ body.partnership-page {
 
 .slider-nav-button.next {
   right: -10px;
+}
+
+/* ============================================= */
+/* GAYA BARU UNTUK HALAMAN DETAIL CHAPTER V2      */
+/* ============================================= */
+
+/* Hero Section dengan Video */
+.hero-video-section {
+  position: relative;
+  height: 80vh;
+  min-height: 500px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -80px; /* Menutupi padding body dari header */
+}
+.hero-video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(9, 65, 98, 0.6);
+  z-index: 2;
+}
+.hero-video-content {
+  position: relative;
+  z-index: 3;
+  color: white;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+.hero-subtitle-v2 {
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--accent-color-yellow-orange);
+  opacity: 0;
+  animation: fadeInSlideUp 1s 0.5s ease-out forwards;
+}
+.hero-title-v2 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  opacity: 0;
+  animation: fadeInSlideUp 1s 0.8s ease-out forwards;
+}
+
+/* Animasi untuk teks hero */
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tata Letak Konten Baru */
+.story-content .story-title {
+  font-weight: 700;
+  color: var(--primary-color-dark-blue);
+  margin-bottom: 1rem;
+}
+.mission-box {
+  background-color: var(--neutral-color-light-gray);
+  border-left: 4px solid var(--primary-color-orange);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+.mission-box .mission-title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.mission-box i {
+  color: var(--primary-color-orange);
+  font-size: 1.2rem;
+  width: 25px;
+}
+.mission-box .row > div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 0.75rem;
+  align-items: start;
+}
+
+.mission-box .row > div i {
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.intro-section-v2 {
+  margin-bottom: 6rem; /* Menambah jarak bawah pada seksi intro */
+}
+
+/* Kartu Statistik Versi 2 */
+.section-title-center {
+  font-weight: 700;
+  color: var(--primary-color-dark-blue);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.stat-card-v2 {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+.stat-card-v2:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-medium);
+}
+.stat-card-v2 .stat-icon {
+  font-size: 2rem;
+  color: var(--accent-color-medium-blue);
+  margin-bottom: 0.5rem;
+}
+.stat-card-v2 .stat-label {
+  font-weight: 500;
+  color: var(--text-color-muted);
+}
+
+/* Sidebar Versi 2 */
+.sidebar-widget-v2 {
+  background-color: var(--neutral-color-light-gray);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+.widget-title-v2 {
+  font-weight: 600;
+  border-bottom: 2px solid var(--primary-color-orange);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+.info-list-v2 {
+  list-style: none;
+  padding-left: 0;
+}
+.info-list-v2 li {
+  margin-bottom: 0.5rem;
+}
+.testimonial-quote-v2 {
+  font-style: italic;
+}
+.testimonial-quote-v2 footer {
+  font-style: normal;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  color: var(--primary-color-dark-blue);
+  font-size: 0.9rem;
+}
+
+/* Slider Relawan Versi 2 (Circular) */
+.volunteer-slider-section-v2 {
+  background-color: white;
+  padding: 4rem 0;
+}
+.volunteer-slider-container-v2 {
+  position: relative;
+}
+.volunteer-slider-wrapper-v2 {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 1rem;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.volunteer-slider-wrapper-v2::-webkit-scrollbar {
+  display: none;
+}
+
+.volunteer-card-v2 {
+  flex: 0 0 150px;
+  text-align: center;
+}
+.volunteer-card-v2 img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  border: 4px solid white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.volunteer-card-v2:hover img {
+  transform: scale(1.05);
+}
+.volunteer-info-v2 {
+  margin-top: 1rem;
+}
+.volunteer-info-v2 h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+.volunteer-info-v2 span {
+  font-size: 0.85rem;
+  color: var(--text-color-muted);
+}
+
+.slider-nav-button-v2 {
+  position: absolute;
+  top: 60px;
+  transform: translateY(-50%);
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+.slider-nav-button-v2:hover {
+  background-color: var(--primary-color-orange);
+  color: white;
+}
+.slider-nav-button-v2.prev {
+  left: -10px;
+}
+.slider-nav-button-v2.next {
+  right: -10px;
+}
+
+/* ============================================= */
+/* GAYA BARU UNTUK HERO SECTION DENGAN GAMBAR    */
+/* ============================================= */
+
+.hero-image-section {
+  position: relative;
+  height: 80vh;
+  min-height: 500px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -80px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* GANTI NAMA FILE GAMBAR LATAR BELAKANG DI SINI */
+  background-image: url("images/yvc3.jpg");
+}
+
+.hero-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(9, 65, 98, 0.6);
+  z-index: 1;
+}
+
+.hero-image-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Menggunakan kembali animasi dari desain sebelumnya */
+.hero-image-content .hero-subtitle-v2 {
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--accent-color-yellow-orange);
+  opacity: 0;
+  animation: fadeInSlideUp 1s 0.5s ease-out forwards;
+}
+
+.hero-image-content .hero-title-v2 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  opacity: 0;
+  animation: fadeInSlideUp 1s 0.8s ease-out forwards;
+}
+
+/* ========================================================== */
+/* GAYA BARU: TAB INTERAKTIF UNTUK IYES MENGAJAR              */
+/* ========================================================== */
+
+.division-tab-section {
+  padding: 4rem 0;
+}
+
+/* Navigasi Tab */
+.division-tabs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 2.5rem;
+}
+.division-tab-btn {
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  color: var(--text-color-muted);
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  transform: translateY(2px);
+  transition: all 0.3s ease;
+}
+.division-tab-btn:hover {
+  background-color: var(--neutral-color-light-gray);
+  color: var(--primary-color-dark-blue);
+}
+.division-tab-btn.active {
+  color: var(--primary-color-orange);
+  border-bottom-color: var(--primary-color-orange);
+}
+
+/* Konten Tab */
+.division-tabs-content .division-tab-pane {
+  display: none; /* Sembunyikan semua panel secara default */
+  animation: fadeIn 0.6s ease;
+}
+.division-tabs-content .division-tab-pane.active {
+  display: block; /* Tampilkan hanya panel yang aktif */
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.division-tab-pane h3 {
+  font-weight: 700;
+  color: var(--primary-color-dark-blue);
+  margin-bottom: 0.75rem;
+}
+.division-tab-pane h3 i {
+  color: var(--primary-color-orange);
+}
+.division-tab-pane p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* Galeri Foto di dalam Tab */
+.division-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+.division-photo-grid img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow-soft);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.division-photo-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: var(--box-shadow-medium);
+}
+
+/* 5target capaian dan dampak iym10 */
+.impact-grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 kolom di layar besar */
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Penyesuaian agar angka persen muncul dengan benar */
+.stat-number-percent::after {
+  content: "%";
+  display: inline;
+}
+
+/* Responsive untuk layar lebih kecil */
+@media (max-width: 992px) {
+  .impact-grid-5 {
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom di tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .impact-grid-5 {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom di HP */
+  }
 }

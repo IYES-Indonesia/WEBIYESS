@@ -26,7 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- Active Link Highlighting (VERSI BARU & LEBIH BAIK) ---
     const currentPath = window.location.pathname; // Contoh: "/tentang-iyes/tentang-kami.html"
-    const navLinks = document.querySelectorAll(".nav-links > .nav-item > .nav-link");
+    const navLinks = document.querySelectorAll(
+      ".nav-links > .nav-item > .nav-link"
+    );
 
     // Hapus semua class aktif terlebih dahulu untuk reset
     navLinks.forEach((link) => {
@@ -142,7 +144,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Cek visibilitas tombol
       function checkButtonVisibility() {
-        const currentFilter = filterButtons.querySelector(".active").getAttribute("data-filter");
+        const currentFilter = filterButtons
+          .querySelector(".active")
+          .getAttribute("data-filter");
         if (currentFilter !== "*") {
           loadMoreBtn.style.display = "none";
           showLessBtn.style.display = "none";
@@ -257,8 +261,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (slider && prevButton && nextButton) {
       const scrollAmount = 300;
-      nextButton.addEventListener("click", () => slider.scrollBy({ left: scrollAmount, behavior: "smooth" }));
-      prevButton.addEventListener("click", () => slider.scrollBy({ left: -scrollAmount, behavior: "smooth" }));
+      nextButton.addEventListener("click", () =>
+        slider.scrollBy({ left: scrollAmount, behavior: "smooth" })
+      );
+      prevButton.addEventListener("click", () =>
+        slider.scrollBy({ left: -scrollAmount, behavior: "smooth" })
+      );
     }
   }
 
@@ -267,7 +275,9 @@ document.addEventListener("DOMContentLoaded", () => {
    */
   function handleProgramFilter() {
     const filterContainer = document.querySelector(".program-filters");
-    const programItems = document.querySelectorAll("#program-grid .program-item");
+    const programItems = document.querySelectorAll(
+      "#program-grid .program-item"
+    );
 
     if (filterContainer && programItems.length > 0) {
       filterContainer.addEventListener("click", function (e) {
@@ -281,7 +291,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         programItems.forEach((item) => {
           const itemCategory = item.getAttribute("data-category");
-          if (filterValue === "*" || (itemCategory && itemCategory.includes(filterValue))) {
+          if (
+            filterValue === "*" ||
+            (itemCategory && itemCategory.includes(filterValue))
+          ) {
             item.style.display = "block";
           } else {
             item.style.display = "none";
@@ -356,7 +369,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const startIndex = (page - 1) * itemsPerPage;
       const endIndex = startIndex + itemsPerPage;
 
-      items.slice(startIndex, endIndex).forEach((item) => item.classList.add("active"));
+      items
+        .slice(startIndex, endIndex)
+        .forEach((item) => item.classList.add("active"));
 
       renderButtons();
 
@@ -523,4 +538,40 @@ document.addEventListener("DOMContentLoaded", function () {
       slider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
     });
   }
+});
+
+// =============================================
+// FUNGSI BARU: TAB INTERAKTIF UNTUK HALAMAN DETAIL
+// =============================================
+function handleDivisionTabs() {
+  const tabContainer = document.querySelector(".division-tabs-nav");
+  if (!tabContainer) return;
+
+  const tabButtons = tabContainer.querySelectorAll(".division-tab-btn");
+  const tabPanes = document.querySelectorAll(".division-tab-pane");
+
+  tabContainer.addEventListener("click", function (e) {
+    const clickedButton = e.target.closest(".division-tab-btn");
+    if (!clickedButton) return;
+
+    // Nonaktifkan semua tombol dan panel
+    tabButtons.forEach((btn) => btn.classList.remove("active"));
+    tabPanes.forEach((pane) => pane.classList.remove("active"));
+
+    // Aktifkan tombol yang diklik
+    clickedButton.classList.add("active");
+
+    // Tampilkan panel yang sesuai
+    const targetPaneId = clickedButton.dataset.target;
+    const targetPane = document.querySelector(targetPaneId);
+    if (targetPane) {
+      targetPane.classList.add("active");
+    }
+  });
+}
+
+// Panggil fungsi baru ini di akhir event listener DOMContentLoaded
+document.addEventListener("DOMContentLoaded", () => {
+  // ... (kode lama Anda di sini) ...
+  handleDivisionTabs(); // Tambahkan baris ini
 });
