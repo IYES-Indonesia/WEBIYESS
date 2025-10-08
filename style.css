@@ -622,7 +622,7 @@ h6 {
 }
 
 /* =============================================
-  Slider Berita Utama di Beranda INDEX
+  Slider Berita Utama di Beranda
    ============================================= */
 
 .featured-news-card {
@@ -635,20 +635,6 @@ h6 {
   aspect-ratio: 16 / 10;
 }
 
-<<<<<<< HEAD
-.carousel-item::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 60%);
-  z-index: 2;
-  pointer-events: none;
-}
-
-=======
 .featured-news-card.carousel,
 .featured-news-card .carousel-inner,
 .featured-news-card .carousel-item {
@@ -687,7 +673,6 @@ h6 {
   pointer-events: none;
 }
 
->>>>>>> update-8-oktober
 .carousel-item .card-overlay-content {
   position: relative;
   z-index: 3;
@@ -725,49 +710,6 @@ h6 {
 .card-overlay-content .card-title a {
   color: inherit;
   text-decoration: none;
-<<<<<<< HEAD
-}
-
-.testimonial-card-v3 {
-  background-color: var(--neutral-color-white);
-  border: 1px solid #e9ecef;
-  color: #343a40;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 1;
-}
-
-.featured-news-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 70%);
-  z-index: 2;
-}
-
-.featured-news-card .card-overlay-content {
-  position: relative;
-  z-index: 3;
-  padding: 1.5rem 2rem;
-}
-
-.testimonial-card-v3:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--box-shadow-large);
-}
-
-.testimonial-photo-v2 {
-  border: 3px solid var(--primary-color-dark-blue);
-}
-
-/* Sembunyikan semua kartu testimoni secara default */
-.testimonial-item {
-  display: none;
-=======
 }
 
 .featured-news-card .carousel-control-prev,
@@ -817,6 +759,11 @@ h6 {
   object-fit: cover;
   object-position: center;
   z-index: 1;
+  transition: transform 0.4s ease;
+}
+
+.featured-news-card:hover .card-img-bg {
+  transform: scale(1.03);
 }
 
 .featured-news-card::after {
@@ -926,7 +873,6 @@ h6 {
 }
 .arrow-link .fas {
   margin-left: 0.5rem;
->>>>>>> update-8-oktober
 }
 
 /* =============================================
@@ -1388,11 +1334,7 @@ h6 {
 .team-member-card .member-name {
   font-weight: 700;
   font-size: 1.1rem;
-<<<<<<< HEAD
   color: var(--neutral-color-dark-gray); /* Default untuk Staff (putih dengan border) */
-=======
-  color: var(--neutral-color-dark-gray);
->>>>>>> update-8-oktober
 }
 
 .team-member-card .member-role {
@@ -2094,7 +2036,6 @@ ul.list-styled-v2 i {
    Komponen Halaman: Detail Program (Scale Up)
    ============================================= */
 
-<<<<<<< HEAD
 /* 1. Hero Section */
 .scaleup-hero {
   background: linear-gradient(to right, rgba(9, 65, 98, 0.9), rgba(9, 65, 98, 0.7)), url("images/fotbaryvc3.JPG") center/cover no-repeat;
@@ -2108,8 +2049,6 @@ ul.list-styled-v2 i {
 }
 
 /* 2. Tentang Program */
-=======
->>>>>>> update-8-oktober
 .scaleup-about .section-title {
   color: var(--primary-color-dark-blue);
   font-weight: 700;
@@ -2296,7 +2235,6 @@ ul.partner-list-v2 li i {
    Komponen Halaman: Berita & Media
    ============================================= */
 
-<<<<<<< HEAD
 /* --- Bagian Featured Podcast --- */
 .featured-podcast-section {
   padding: 5rem 0;
@@ -2378,24 +2316,13 @@ ul.partner-list-v2 li i {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 70%);
   z-index: 2;
 }
-=======
-.news-section {
-  background-color: var(--neutral-color-white);
-}
-
-/* Kartu Berita Utama (Besar) */
->>>>>>> update-8-oktober
 
 .featured-news-card-large {
   position: relative;
   border-radius: var(--border-radius-large);
   overflow: hidden;
-<<<<<<< HEAD
   border: 1px solid #e9ecef;
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
-=======
-  color: var(--neutral-color-white);
->>>>>>> update-8-oktober
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -2677,29 +2604,7 @@ ul.partner-list-v2 li i {
 .report-card-wrapper {
   flex: 0 0 300px; /* Menetapkan lebar setiap item di slider */
   scroll-snap-align: start;
-<<<<<<< HEAD
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
-=======
-}
-
-/* Gaya Kartu Elegan (yang Anda sukai) */
-.report-showcase-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  border-radius: var(--border-radius-large);
-  overflow: hidden;
-  color: var(--neutral-color-white);
-  text-decoration: none;
-  height: 100%;
-  aspect-ratio: 3 / 4;
-  box-shadow: var(--box-shadow-soft);
-  transition: all 0.3s ease;
-}
-.report-showcase-card:hover {
-  transform: translateY(-8px);
->>>>>>> update-8-oktober
   box-shadow: var(--box-shadow-medium);
 }
 .report-showcase-card::before {
@@ -2731,7 +2636,6 @@ ul.partner-list-v2 li i {
   padding: 1.5rem;
   text-align: center;
 }
-<<<<<<< HEAD
 
 .archive-wrapper .report-card img {
   width: 100%;
@@ -2751,12 +2655,6 @@ ul.partner-list-v2 li i {
   height: 100%;
   object-fit: cover;
   border-radius: 8px 8px 0 0;
-=======
-.report-showcase-card .year-tag {
-  font-size: 2.5rem;
-  font-weight: 800;
-  line-height: 1;
->>>>>>> update-8-oktober
 }
 .report-showcase-card .card-title {
   font-size: 1rem;
@@ -2905,14 +2803,11 @@ body.partnership-page {
   background-color: var(--neutral-color-off-white);
 }
 
-<<<<<<< HEAD
 /* Modifier Class untuk Banner Halaman Kemitraan */
 .page-banner-with-bg.gradient-partnership::before {
   background: linear-gradient(45deg, rgba(var(--primary-color-dark-blue-rgb), 0.7), rgba(246, 174, 45, 0.5));
 }
 
-=======
->>>>>>> update-8-oktober
 /* --- Bagian Keuntungan Kemitraan --- */
 .benefits-section {
   padding: 5rem 0;
@@ -3179,7 +3074,6 @@ body.partnership-page {
 
 .contact-item .contact-label {
   font-size: 1.1rem;
-<<<<<<< HEAD
   margin-bottom: 15px;
   color: var(--primary-color-dark-blue);
 }
@@ -3203,8 +3097,6 @@ body.partnership-page {
 
 .contact-item .contact-label {
   font-size: 1.1rem;
-=======
->>>>>>> update-8-oktober
   font-weight: 600;
   color: var(--primary-color-dark-blue);
   margin-bottom: 0.25rem;
