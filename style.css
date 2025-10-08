@@ -69,8 +69,7 @@ body {
 a {
   color: var(--primary-color-orange);
   text-decoration: none;
-  transition: color var(--transition-speed) ease,
-    opacity var(--transition-speed) ease;
+  transition: color var(--transition-speed) ease, opacity var(--transition-speed) ease;
 }
 
 a:hover,
@@ -539,11 +538,7 @@ h6 {
    ============================================= */
 
 .featured-programs-v2 {
-  background: linear-gradient(
-    180deg,
-    var(--neutral-color-white) 0%,
-    var(--neutral-color-off-white) 100%
-  );
+  background: linear-gradient(180deg, var(--neutral-color-white) 0%, var(--neutral-color-off-white) 100%);
 }
 
 .program-card-v2 {
@@ -618,22 +613,73 @@ h6 {
   transform: translateX(5px);
 }
 
-/* Testimoni Section (Halaman Utama)
-   =================================================================== */
-.testimonials-section-v2 {
+/* =============================================
+   Komponen: Section Berita & Prestasi di Beranda
+   ============================================= */
+
+.news-section {
+  background-color: var(--neutral-color-white);
+}
+
+/* =============================================
+  Slider Berita Utama di Beranda INDEX
+   ============================================= */
+
+.featured-news-card {
   position: relative;
   padding: 8rem 0 4rem;
   background-color: var(--neutral-color-light-gray);
 }
 
-.testimonials-section-v2 .section-title {
-  color: var(--primary-color-dark-blue);
+.carousel-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 60%);
+  z-index: 2;
+  pointer-events: none;
 }
 
-.testimonials-section-v2 .section-intro {
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: var(--primary-color-orange);
+.carousel-item .card-overlay-content {
+  position: relative;
+  z-index: 3;
+  padding: 1.5rem 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card-overlay-content .news-category-tag {
+  display: inline-block;
+  background-color: var(--primary-color-orange);
+  color: var(--neutral-color-white);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  align-self: flex-start;
+}
+
+.card-overlay-content .card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--neutral-color-white);
+  opacity: 0.3;
+}
+
+.card-overlay-content .card-title:hover {
+  opacity: 1;
+}
+
+.card-overlay-content .card-title a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .testimonial-card-v3 {
@@ -641,7 +687,26 @@ h6 {
   border: 1px solid #e9ecef;
   color: #343a40;
   height: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+.featured-news-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 70%);
+  z-index: 2;
+}
+
+.featured-news-card .card-overlay-content {
+  position: relative;
+  z-index: 3;
+  padding: 1.5rem 2rem;
 }
 
 .testimonial-card-v3:hover {
@@ -745,20 +810,8 @@ h6 {
   padding: 20px 0;
   background: transparent;
   position: relative;
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent,
-    #000 15%,
-    #000 85%,
-    transparent
-  );
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    #000 15%,
-    #000 85%,
-    transparent
-  );
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
 }
 
 .logos-slide {
@@ -853,11 +906,7 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0) 60%
-  );
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 60%);
   z-index: 1;
   display: flex;
   align-items: flex-end;
@@ -1068,8 +1117,7 @@ h6 {
   text-align: center;
   border: 1px solid var(--border-color); /* Border default untuk staf */
   box-shadow: var(--box-shadow-soft);
-  transition: transform var(--transition-speed) ease,
-    box-shadow var(--transition-speed) ease;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
   height: 100%;
   overflow: hidden;
   display: flex;
@@ -1101,9 +1149,7 @@ h6 {
 .team-member-card .member-name {
   font-weight: 700;
   font-size: 1.1rem;
-  color: var(
-    --neutral-color-dark-gray
-  ); /* Default untuk Staff (putih dengan border) */
+  color: var(--neutral-color-dark-gray); /* Default untuk Staff (putih dengan border) */
 }
 
 .team-member-card .member-role {
@@ -1324,8 +1370,7 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: box-shadow var(--transition-speed) ease,
-    border-color var(--transition-speed) ease;
+  transition: box-shadow var(--transition-speed) ease, border-color var(--transition-speed) ease;
 }
 
 .alumni-card-classic:hover {
@@ -1628,11 +1673,7 @@ ul.list-styled-v2 i {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.5) 0%,
-    rgba(0, 0, 0, 0) 60%
-  );
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 60%);
   opacity: 0.8;
   transition: opacity 0.3s ease;
 }
@@ -1839,12 +1880,7 @@ ul.list-styled-v2 i {
 
 /* 1. Hero Section */
 .scaleup-hero {
-  background: linear-gradient(
-      to right,
-      rgba(9, 65, 98, 0.9),
-      rgba(9, 65, 98, 0.7)
-    ),
-    url("images/fotbaryvc3.JPG") center/cover no-repeat;
+  background: linear-gradient(to right, rgba(9, 65, 98, 0.9), rgba(9, 65, 98, 0.7)), url("images/fotbaryvc3.JPG") center/cover no-repeat;
   padding: 9rem 0;
   color: var(--neutral-color-white);
 }
@@ -2085,21 +2121,80 @@ ul.partner-list-v2 li i {
   background-color: var(--neutral-color-off-white);
 }
 
-.podcast-card-revised {
+/* Kartu Berita Utama (Besar) */
+
+.featured-news-card-large {
+  position: relative;
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+  color: var(--neutral-color-white);
   display: flex;
-  align-items: center;
-  background-color: var(--neutral-color-white);
-  border-radius: 12px;
-  box-shadow: var(--box-shadow-large);
-  padding: 1rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  min-height: 450px;
+  text-decoration: none;
 }
 
-.podcast-card-revised .podcast-image {
+/* Pastikan Carousel dan itemnya mengisi penuh wadah */
+.featured-news-card-large.carousel,
+.featured-news-card-large .carousel-inner,
+.featured-news-card-large .carousel-item {
+  height: 100%;
+}
+
+/* Pastikan tombol navigasi slider berada di lapisan paling atas agar bisa diklik */
+.featured-news-card-large .carousel-control-prev,
+.featured-news-card-large .carousel-control-next {
+  z-index: 6;
+}
+
+/* Gaya untuk indikator (titik-titik) */
+.featured-news-card-large .carousel-indicators {
+  z-index: 4;
+  bottom: 20px;
+}
+
+/* Gaya untuk link di dalam judul */
+.featured-news-card-large .card-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.news-category-large {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
   width: 150px;
-  height: 150px;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.featured-news-card-large .card-img-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 8px;
-  flex-shrink: 0;
+  z-index: 1;
+  transition: transform 0.4s ease;
+}
+.featured-news-card-large:hover .card-img-bg {
+  transform: scale(1.03);
+}
+.featured-news-card-large::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 70%);
+  z-index: 2;
 }
 
 .podcast-card-revised .podcast-content {
@@ -2121,8 +2216,7 @@ ul.partner-list-v2 li i {
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid #e9ecef;
-  transition: transform var(--transition-speed) ease,
-    box-shadow var(--transition-speed) ease;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -2162,6 +2256,53 @@ ul.partner-list-v2 li i {
   font-size: 0.8rem;
 }
 
+/* Kategori Badge */
+.news-category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3em 0.8em;
+}
+
+.news-card .news-date {
+  font-weight: 500;
+}
+
+.bg-primary-orange {
+  background-color: var(--primary-color-orange) !important;
+}
+.bg-accent-blue {
+  background-color: var(--accent-color-medium-blue) !important;
+}
+.bg-accent-yellow {
+  background-color: var(--accent-color-yellow-orange) !important;
+}
+
+.bg-secondary-dark-blue {
+  background-color: var(--primary-color-dark-blue) !important;
+}
+
+/* Sembunyikan semua item berita secara default */
+.news-item {
+  display: none;
+}
+
+/* Tampilkan item yang memiliki class 'active' dari JavaScript */
+.news-item.active {
+  display: block;
+}
+
+/* Gaya untuk subjudul section dan dropdown urutkan */
+.section-subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color-dark-blue);
+}
+
+.dropdown-menu-end {
+  right: 0;
+  left: auto;
+}
+
 /* --- Seksi Promo Laporan Tahunan --- */
 .report-promo-section {
   padding-bottom: 5rem;
@@ -2169,11 +2310,7 @@ ul.partner-list-v2 li i {
 }
 
 .report-promo-card {
-  background: linear-gradient(
-    to right,
-    var(--primary-color-dark-blue),
-    var(--accent-color-medium-blue)
-  );
+  background: linear-gradient(to right, var(--primary-color-dark-blue), var(--accent-color-medium-blue));
   border-radius: 12px;
   color: var(--neutral-color-white);
   padding: 2.5rem;
@@ -2276,8 +2413,7 @@ ul.partner-list-v2 li i {
 .archive-wrapper .report-card {
   flex: 0 0 280px;
   scroll-snap-align: start;
-  transition: transform var(--transition-speed) ease,
-    box-shadow var(--transition-speed) ease;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
   box-shadow: var(--box-shadow-medium);
   background-color: var(--neutral-color-white);
   border-radius: 8px;
@@ -2295,7 +2431,20 @@ ul.partner-list-v2 li i {
 
 .archive-wrapper .report-card img {
   width: 100%;
-  height: 300px;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 60%);
+  z-index: 2;
+  transition: background 0.3s ease;
+}
+.report-showcase-card:hover::before {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 70%);
+}
+.report-showcase-card .card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 8px 8px 0 0;
 }
@@ -2358,8 +2507,7 @@ ul.partner-list-v2 li i {
   background-color: var(--neutral-color-white);
   border-radius: 15px; /* Bisa dibuat variabel jika ingin konsisten */
   box-shadow: var(--box-shadow-medium);
-  transition: transform var(--transition-speed) ease,
-    box-shadow var(--transition-speed) ease;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -2442,11 +2590,7 @@ body.partnership-page {
 
 /* Modifier Class untuk Banner Halaman Kemitraan */
 .page-banner-with-bg.gradient-partnership::before {
-  background: linear-gradient(
-    45deg,
-    rgba(var(--primary-color-dark-blue-rgb), 0.7),
-    rgba(246, 174, 45, 0.5)
-  );
+  background: linear-gradient(45deg, rgba(var(--primary-color-dark-blue-rgb), 0.7), rgba(246, 174, 45, 0.5));
 }
 
 /* --- Bagian Keuntungan Kemitraan --- */
@@ -2461,8 +2605,7 @@ body.partnership-page {
   border: 1px solid #e9ecef;
   border-radius: 12px;
   height: 100%;
-  transition: transform var(--transition-speed) ease,
-    box-shadow var(--transition-speed) ease;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
 .benefit-card:hover {
@@ -2558,11 +2701,7 @@ body.partnership-page {
 /* --- Bagian Jembatan Emosional (Next Story) --- */
 .next-story-section {
   padding: 5rem 0;
-  background: linear-gradient(
-    45deg,
-    var(--primary-color-dark-blue),
-    var(--accent-color-medium-blue)
-  );
+  background: linear-gradient(45deg, var(--primary-color-dark-blue), var(--accent-color-medium-blue));
   color: var(--neutral-color-white);
 }
 
@@ -2822,87 +2961,96 @@ body.partnership-page {
   font-weight: 600;
 }
 
-/* FAQ */
-.faq-section {
-  padding: 80px 0;
-  background-color: var(--bg-white);
-  text-align: center;
+/* =============================================
+   Gaya Halaman Kontak
+   ============================================= */
+
+.contact-page .page-banner {
+  background-color: var(--primary-color-dark-blue);
+  color: var(--neutral-color-white);
 }
 
-.faq-section .section-title {
-  margin-bottom: 20px;
+.contact-page .page-banner h1 {
+  color: var(--neutral-color-white);
 }
 
-.faq-section .section-description {
-  margin-bottom: 60px;
-}
-
-.faq-container {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.faq-item {
-  background-color: var(--neutral-color-light-gray);
-  border: 1px solid var(--neutral-color-light-gray);
-  border-radius: 10px;
-  margin-bottom: 15px;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-}
-
-.faq-item[open] {
-  background-color: var(--neutral-color-off-white);
-  border-color: var(--primary-color-dark-blue);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-}
-
-.faq-question {
-  font-size: 1.15rem;
+.contact-item .contact-label {
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--primary-color-dark-blue);
-  padding: 20px 25px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.social-media-heading {
+  color: var(--primary-color-dark-blue);
+  font-size: 1.25rem;
+}
+
+.social-media-icons-contact .social-icon {
+  display: inline-flex;
   align-items: center;
-  position: relative;
-  font-family: var(--primary-color-dark-blue);
-}
-
-.faq-question::after {
-  content: "\25B6";
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--neutral-color-light-gray);
+  color: var(--text-color-muted);
+  margin-right: 0.5rem;
   font-size: 1.2rem;
-  color: var(--primary-color-dark-blue);
-  margin-left: 15px;
-  transition: transform 0.3s ease;
-  display: inline-block;
+  transition: all 0.3s ease;
 }
 
-.faq-item[open] .faq-question::after {
-  transform: rotate(90deg);
-  content: "\25BC";
+.social-media-icons-contact .social-icon:hover {
+  color: var(--neutral-color-white);
+  transform: translateY(-3px);
 }
 
-.faq-answer {
-  padding: 0 25px 20px 25px;
-  font-size: 1rem;
-  color: var(--primary-color-dark-blue);
-  line-height: 1.6;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
-  font-family: var(--secondary-color-dark-gray);
+/* Warna spesifik untuk setiap ikon saat hover */
+.social-media-icons-contact .instagram:hover {
+  background-color: #e1306c;
+}
+.social-media-icons-contact .facebook:hover {
+  background-color: #1877f2;
+}
+.social-media-icons-contact .linkedin:hover {
+  background-color: #0a66c2;
+}
+.social-media-icons-contact .tiktok:hover {
+  background-color: #000000;
+}
+.social-media-icons-contact .youtube:hover {
+  background-color: #ff0000;
 }
 
-.faq-item[open] .faq-answer {
-  max-height: 200px;
-  padding-top: 15px;
+.map-container {
+  height: 100%;
+  min-height: 400px;
 }
 
-.faq-answer p {
-  margin-bottom: 10px;
+.map-container iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.faq-section {
+  background-color: var(--neutral-color-off-white);
+}
+
+.accordion-item {
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--border-radius-base) !important;
+  margin-bottom: 1rem;
+}
+
+.accordion-button {
+  font-weight: 600;
+  color: var(--text-color-dark);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: rgba(var(--primary-color-orange-rgb), 0.1);
+  color: var(--primary-color-orange);
+  box-shadow: none;
 }
 
 /* Footer
@@ -2968,8 +3116,7 @@ body.partnership-page {
   color: rgba(var(--neutral-color-white-rgb), 0.75);
   font-size: 1.5rem;
   margin-right: 18px;
-  transition: color var(--transition-speed) ease,
-    transform var(--transition-speed) ease;
+  transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
 }
 
 #footer .footer-social-media a:hover {
@@ -3020,33 +3167,6 @@ body.partnership-page {
   background-color: var(--accent-color-yellow-orange);
   transform: translateY(-4px) scale(1.05);
   opacity: 1;
-}
-
-/* Keyframes untuk Animasi
-   =================================================================== */
-@keyframes arc-up-animation 
-  0%,
-  100% {
-  transform: translateY(0px);
-}
-50% {
-  transform: translateY(-50px);
-}
-
-@keyframes scroll-left 
-  0% {
-  transform: translateX(0);
-}
-100% {
-  transform: translateX(-50%);
-}
-
-@keyframes scroll-right 
-  0% {
-  transform: translateX(-50%);
-}
-100% {
-  transform: translateX(0);
 }
 
 /* ====================================================== */

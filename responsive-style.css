@@ -85,6 +85,7 @@
   }
 
   .nav-links.active {
+    z-index: 1021;
     display: flex; /* Tampilkan saat menu di-toggle */
   }
 
