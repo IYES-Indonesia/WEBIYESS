@@ -334,10 +334,6 @@
           <li class="nav-item">
             <a class="nav-link" href="../kontak.html">Kontak</a>
           </li>
-          <li class="language-switcher">
-            <button id="lang-id" class="active-lang">ID</button
-            ><span class="separator">|</span><button id="lang-en">EN</button>
-          </li>
         </ul>
         <button class="menu-toggle" aria-label="Toggle navigation">
           <span></span><span></span><span></span>
@@ -346,8 +342,13 @@
     </header>
 
     <main>
-      <section class="page-banner-with-bg">
-        <div class="container text-center">
+      <section class="page-hero">
+        <img
+          src="../images/Latar-belakang-pages.png"
+          alt=""
+          class="hero-background-image"
+        />
+        <div class="container">
           <h1 class="display-4 fw-bold">Kisah & Dampak</h1>
           <p class="lead">
             Cerita mereka adalah bukti nyata perubahan. Inilah dampak IYES
@@ -375,7 +376,7 @@
         </div>
       </section>
 
-      <section class="impact-numbers-section">
+      <!-- <section class="impact-numbers-section">
         <div class="container">
           <div class="row g-4">
             <div class="col-lg-3 col-6">
@@ -418,35 +419,19 @@
           <div class="row g-4 justify-content-center">
             <div class="col-lg-6">
               <div class="video-wrapper">
-                <iframe
-                  src="https://www.youtube.com/embed/VIDEO_ID_1"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
-              <p class="mt-3 text-center video-caption">
-                Kisah Inspiratif dari [Nama Alumni 1]
-              </p>
+              <p class="mt-3 text-center video-caption">Kisah Inspiratif dari [Nama Alumni 1]</p>
             </div>
             <div class="col-lg-6">
               <div class="video-wrapper">
-                <iframe
-                  src="https://www.youtube.com/embed/VIDEO_ID_2"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
-              <p class="mt-3 text-center video-caption">
-                Pengalaman Berkesan dari [Nama Alumni 2]
-              </p>
+              <p class="mt-3 text-center video-caption">Pengalaman Berkesan dari [Nama Alumni 2]</p>
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section class="testimonials-section">
         <div class="container">
@@ -461,243 +446,366 @@
             <button class="btn btn-outline-primary active" data-filter="*">
               Semua
             </button>
-            <button
-              class="btn btn-outline-primary"
-              data-filter=".program-iyes-mengajar"
-            >
+            <button class="btn btn-outline-primary" data-filter=".alumni">
               Alumni IYES
             </button>
-            <button class="btn btn-outline-primary" data-filter=".program-yvc">
-              IYES
-            </button>
-            <button class="btn btn-outline-primary" data-filter=".program-yvc">
+            <button class="btn btn-outline-primary" data-filter=".volunteer">
               Volunteer
             </button>
-            <button
-              class="btn btn-outline-primary"
-              data-filter=".program-workshop"
-            >
+            <button class="btn btn-outline-primary" data-filter=".masyarakat">
               Masyarakat
             </button>
           </div>
 
           <div class="row g-4 testimonial-grid">
-            <div class="col-md-6 col-lg-3 testimonial-item program-executive">
+            <!-- Testimonial Alumni -->
+
+            <!-- <div class="col-md-6 col-lg-3 testimonial-item alumni">
               <div class="alumni-card-classic">
-                <img
-                  src="../images/ineke.jpg"
-                  class="alumni-photo"
-                  alt="Foto Ineke Rahmadini"
-                />
+                <div class="member-photo-wrapper">
+                  <img src="../images/foto_testi/.png" class="alumni-photo" alt="Foto habib" />
+                </div>
                 <h4 class="alumni-name">Ineke Rahmadini</h4>
                 <p class="alumni-batch">Ex-Executive Director</p>
+                <p class="alumni-quote">"Pengalaman menjadi volunteer di IYES Mengajar membuka mata saya..."</p>
+                <a href="#" class="read-more-link" data-bs-toggle="modal" data-bs-target="#modalSutrisno">Baca Selengkapnya →</a>
+              </div>
+            </div> -->
+
+            <!-- <div class="col-md-6 col-lg-3 testimonial-item alumni">
+              <div class="alumni-card-classic">
+                <div class="member-photo-wrapper">
+                  <img src="../images/foto_testi/.png" class="alumni-photo" alt="Foto habib" />
+                </div>
+                <h4 class="alumni-name">Restu Alfianita</h4>
+                <p class="alumni-batch">Ex-Vice Director</p>
+                <p class="alumni-quote">"Menjadi tim event IYES itu seru dan menantang. Saya belajar manajemen..."</p>
+                <a href="#" class="read-more-link" data-bs-toggle="modal" data-bs-target="#modalSutrisno">Baca Selengkapnya →</a>
+              </div>
+            </div> -->
+
+            <div class="col-md-6 col-lg-3 testimonial-item volunteer">
+              <div class="alumni-card-classic">
+                <div class="member-photo-wrapper">
+                  <img
+                    src="../images/foto_testi/habib.png"
+                    class="alumni-photo"
+                    alt="Foto habib"
+                  />
+                </div>
+                <h4 class="alumni-name">Husnul Qadri Habibullah</h4>
+                <p class="alumni-batch">Volunteer IYM 10</p>
                 <p class="alumni-quote">
-                  "Pengalaman menjadi volunteer di IYES Mengajar membuka mata
-                  saya..."
+                  "Bergabung di Divisi Sosial Ekonomi IYES memberi pengalaman
+                  berkesan saat membuat gula cair dari sagu bersama tim. Awalnya
+                  sempat deg-degan karena belum pernah mencoba, namun tantangan
+                  justru membuat tim kompak mencari cara agar warga paham.
+                  Dengan penjelasan yang sabar, akhirnya warga mengerti dan
+                  antusias. Pengalaman ini tidak hanya soal membuat produk,
+                  tetapi juga belajar pentingnya kerja sama tim, saling
+                  mendukung, dan menemukan solusi bersama. Pelajaran terbesarnya
+                  adalah bahwa niat baik dan kolaborasi bisa membawa dampak
+                  positif bagi banyak orang."
                 </p>
+                <a
+                  href="#"
+                  class="read-more-link"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalHusnul"
+                  >Baca Selengkapnya →</a
+                >
               </div>
             </div>
 
-            <div class="col-md-6 col-lg-3 testimonial-item program-yvc">
+            <div class="col-md-6 col-lg-3 testimonial-item volunteer">
               <div class="alumni-card-classic">
-                <img
-                  src="../images/vici.jpg"
-                  class="alumni-photo"
-                  alt="Foto Vici Fathir Susilo"
-                />
-                <h4 class="alumni-name">Vici Fathir Susilo</h4>
-                <p class="alumni-batch">Head Divisi Program</p>
+                <div class="member-photo-wrapper">
+                  <img
+                    src="../images/foto_testi/yosi_testi.jpg"
+                    class="alumni-photo"
+                    alt="Foto yosi"
+                  />
+                </div>
+                <h4 class="alumni-name">Yosivera Munthe</h4>
+                <p class="alumni-batch">Volunteer YVC 2025</p>
                 <p class="alumni-quote">
-                  "Di IYES, saya tidak hanya mengembangkan skill organisasi tapi
-                  juga leadership..."
+                  Ekspetasi join volunteer itu ternyata dijawab sama IYES
+                  Indonesia. Benar-benar sebagai ruang untuk bertumbuh. Awalnya
+                  join YVC 2025 itu ga pernah bayangin bahwa relasi aku sendiri
+                  ga berhenti hanya sampai di camping kemarin. Balik kegiatan
+                  ini, benar-benar merasa memiliki keluarga meski jauh dari
+                  keluarga. Thank You IYES Indonesia, semangat bertumbuh dan
+                  jadi kekuatan baru yaa
                 </p>
+                <a
+                  href="#"
+                  class="read-more-link"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalYosi"
+                  >Baca Selengkapnya →</a
+                >
               </div>
             </div>
 
-            <div class="col-md-6 col-lg-3 testimonial-item program-workshop">
+            <div class="col-md-6 col-lg-3 testimonial-item volunteer">
               <div class="alumni-card-classic">
-                <img
-                  src="../images/dirgak.jpg"
-                  class="alumni-photo"
-                  alt="Foto Dirgak"
-                />
-                <h4 class="alumni-name">Dirgak</h4>
-                <p class="alumni-batch">Peserta Workshop SDGs</p>
+                <div class="member-photo-wrapper">
+                  <img
+                    src="../images/foto_testi/firman_testi.jpg"
+                    class="firman-photo"
+                    alt="Foto yosi"
+                  />
+                </div>
+                <h4 class="alumni-name">Firman Riawan</h4>
+                <p class="alumni-batch">Volunteer YVC 2025</p>
                 <p class="alumni-quote">
-                  "Workshop SDGs dari IYES sangat mencerahkan. Saya jadi lebih
-                  paham..."
+                  Menurut saya sangat berdampak dalam mengisi pengetahuan
+                  toleransi suku, ras, agama, bahkan dari di luar aspek 3 tadi,
+                  yang di mana mengisi kekosongan mungkin dari layar belakang
+                  keluarga yang tidak menggalakkan prihal toleransi, sehingga
+                  kita sudah ter bekali kedepannya jika menjadi orang tua
+                  ataupun di lingkungan masyarakat.
                 </p>
+                <a
+                  href="#"
+                  class="read-more-link"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalFirman"
+                  >Baca Selengkapnya →</a
+                >
               </div>
             </div>
 
-            <div class="col-md-6 col-lg-3 testimonial-item program-executive">
+            <!-- <div class="col-md-6 col-lg-3 testimonial-item volunteer">
               <div class="alumni-card-classic">
-                <img
-                  src="../images/restu.jpg"
-                  class="alumni-photo"
-                  alt="Foto Restu Alfianita"
-                />
-                <h4 class="alumni-name">Restu Alfianita</h4>
-                <p class="alumni-batch">Ex-Vice Director</p>
+                <div class="member-photo-wrapper">
+                  <img src="../images/foto_testi/.png" class="alumni-photo" alt="Foto habib" />
+                </div>
+                <h4 class="alumni-name">Aldy Suhendar</h4>
+                <p class="alumni-batch">Volunteer IYM 10</p>
+                <p class="alumni-quote">"Menjadi tim event IYES itu seru dan menantang. Saya belajar manajemen..."</p>
+                <a href="#" class="read-more-link" data-bs-toggle="modal" data-bs-target="#modalSutrisno">Baca Selengkapnya →</a>
+              </div>
+            </div> -->
+
+            <div class="col-md-6 col-lg-3 testimonial-item volunteer">
+              <div class="alumni-card-classic">
+                <div class="member-photo-wrapper">
+                  <img
+                    src="../images/foto_testi/putri_test.jpg"
+                    class="firman-photo"
+                    alt="Foto putri"
+                  />
+                </div>
+                <h4 class="alumni-name">Nareswari Putri Sestina</h4>
+                <p class="alumni-batch">Volunteer YVC 2025</p>
                 <p class="alumni-quote">
-                  "Menjadi tim event IYES itu seru dan menantang. Saya belajar
-                  manajemen..."
+                  "waktu ikut event di YVC 2025, besssttt banget sih. selain
+                  dapat extraordinary lessons and experience, di sini aku ketemu
+                  dengan orang orang yang pasti nyaaa kereeeen kece dehh. ga
+                  hanya kereen and kece dalam visual tapi kecee jugaa dalam segi
+                  ilmu dan segudang experience nya. temen temen dari IYES jugaa
+                  humble and warm, jadi ga kerasa awkward gituuu. i'm truly
+                  thankful karena bisa berpartisipasi di event YVC 2025🫶🏻"
                 </p>
+                <a
+                  href="#"
+                  class="read-more-link"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalPutri"
+                  >Baca Selengkapnya →</a
+                >
               </div>
             </div>
 
-            <div
-              class="col-md-6 col-lg-3 testimonial-item program-iyes-mengajar"
-            >
+            <div class="col-md-6 col-lg-3 testimonial-item alumni">
               <div class="alumni-card-classic">
-                <img
-                  src="../images/restu.jpg"
-                  class="alumni-photo"
-                  alt="Foto Restu Alfianita"
-                />
-                <h4 class="alumni-name">Restu Alfianita</h4>
-                <p class="alumni-batch">Ex-Vice Director</p>
+                <div class="member-photo-wrapper">
+                  <img
+                    src="../images/foto_testi/arif_testi.jpeg"
+                    class="alumni-photo"
+                    alt="Foto arif"
+                  />
+                </div>
+                <h4 class="alumni-name">Arif Rahman</h4>
+                <p class="alumni-batch">Alumni IYES</p>
                 <p class="alumni-quote">
-                  "Menjadi tim event IYES itu seru dan menantang. Saya belajar
-                  manajemen..."
+                  "Jangan lihat apa yang diberikan, tetapi pergerakan apa yang
+                  mampu kita lakukan untuk perubahan yang signifikan. Karna,
+                  sejauh apapun kita melangkah kita pasti ingat tempat awal kita
+                  melangkah. Dan sejauh apapun kita singgah, pasti kita semua
+                  menjalankan amanah."
                 </p>
+                <a
+                  href="#"
+                  class="read-more-link"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalArif"
+                  >Baca Selengkapnya →</a
+                >
               </div>
             </div>
-            <div class="col-md-6 col-lg-3 testimonial-item program-yvc">
+
+            <div class="col-md-6 col-lg-3 testimonial-item volunteer">
               <div class="alumni-card-classic">
-                <img
-                  src="../images/restu.jpg"
-                  class="alumni-photo"
-                  alt="Foto Restu Alfianita"
-                />
-                <h4 class="alumni-name">Restu Alfianita</h4>
-                <p class="alumni-batch">Ex-Vice Director</p>
+                <div class="member-photo-wrapper">
+                  <img
+                    src="../images/foto_testi/haura_testi.jpg"
+                    class="alumni-photo"
+                    alt="Foto haura"
+                  />
+                </div>
+                <h4 class="alumni-name">Azra Haura Dayani</h4>
+                <p class="alumni-batch">Volunteer IYM 10 dan YVC 2025</p>
                 <p class="alumni-quote">
-                  "Menjadi tim event IYES itu seru dan menantang. Saya belajar
-                  manajemen..."
+                  Hallo Sobat IYES, kenalin nama aku Azra Haura Dayani, aku
+                  adalah seorang mahasiswa yg dulunya berpikir jika memasuki
+                  Dunia NGO tidak akan berdampak banyak baik padaku. Tapi, saat
+                  pertama kali aku mengenal IYES, aku pribadi merasakan hal
+                  berbeda. Kayak, saat pertama kali aku mengikuti program YVC
+                  2025, aku ngerasain dalam pergaulannya yang dimana tujuan kami
+                  sama dan pemikiran yang sama. Saat selesai mengikuti Program
+                  IYM 10 aku makin ngerasain sikap kepedulian satu sama lainnya
+                  tanpa memandang latar belakang. Disini aku juga mendapatkan
+                  kesempatan emas yang dimana aku diterima menjadi salah satu
+                  anggota Volunteer IYM 10 dan masuk divisi Pubdok. Didalam
+                  divisi ini juga aku belajar bagaimana menangkap moment dalam
+                  sekejap dan lain². Didivisi ini ( Pubdok ) aku diterima baik
+                  dan diajari mulai dari awal tanpa adanya tindak kekerasan
+                  senoritas ataupun sebagainya. Mereka memberi tauku dengan
+                  sopan dan baik. Untuk itu, terima kasih IYES atas
+                  kesempatannya😁
                 </p>
+                <a
+                  href="#"
+                  class="read-more-link"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalHaura"
+                  >Baca Selengkapnya →</a
+                >
               </div>
             </div>
-            <div class="col-md-6 col-lg-3 testimonial-item program-yvc">
+
+            <div class="col-md-6 col-lg-3 testimonial-item volunteer">
               <div class="alumni-card-classic">
-                <img
-                  src="../images/restu.jpg"
-                  class="alumni-photo"
-                  alt="Foto Restu Alfianita"
-                />
-                <h4 class="alumni-name">Restu Alfianita</h4>
-                <p class="alumni-batch">Ex-Vice Director</p>
+                <div class="member-photo-wrapper">
+                  <img
+                    src="../images/foto_testi/bgjer_testi.jpg"
+                    class="alumni-photo"
+                    alt="Foto jeremy"
+                  />
+                </div>
+                <h4 class="alumni-name">Jeremy Manik</h4>
+                <p class="alumni-batch">Volunteer IYM 10</p>
                 <p class="alumni-quote">
-                  "Menjadi tim event IYES itu seru dan menantang. Saya belajar
-                  manajemen..."
+                  My time as a volunteer was nothing short of transformative,
+                  perfectly blending purpose with heart. The highlight was
+                  undoubtedly stepping into the community to practically apply
+                  our academic learning, which gave our knowledge a deeper
+                  meaning. But beyond the service, the true magic lay in the
+                  powerful bonds we forged; the shared commitment fostered an
+                  incredible sense of ownership and care among every volunteer
+                  and IYES member, making us feel like true siblings from
+                  another mothers🫶🤍 It was such a fun and fulfilling
+                  ride—should we do it again?👀
                 </p>
+                <a
+                  href="#"
+                  class="read-more-link"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalBgjer"
+                  >Baca Selengkapnya →</a
+                >
               </div>
             </div>
-            <div class="col-md-6 col-lg-3 testimonial-item program-yvc">
+
+            <div class="col-md-6 col-lg-3 testimonial-item volunteer">
               <div class="alumni-card-classic">
-                <img
-                  src="../images/restu.jpg"
-                  class="alumni-photo"
-                  alt="Foto Restu Alfianita"
-                />
-                <h4 class="alumni-name">Restu Alfianita</h4>
-                <p class="alumni-batch">Ex-Vice Director</p>
+                <div class="member-photo-wrapper">
+                  <img
+                    src="../images/foto_testi/maysa_testi.jpeg"
+                    class="firman-photo"
+                    alt="Foto maysa"
+                  />
+                </div>
+                <h4 class="alumni-name">Maysa Febrianda</h4>
+                <p class="alumni-batch">Volunteer IYM 10</p>
                 <p class="alumni-quote">
-                  "Menjadi tim event IYES itu seru dan menantang. Saya belajar
-                  manajemen..."
+                  Sangat bersyukur bisa menjadi bagian dari program yang luas
+                  biasa keren IYM 10 Mengajar, terlebih menjadi volunteer
+                  kesehatan yang dimana selama kegiatan senang banget bisa
+                  berbagi ilmu, bertukar pendapat, beproses dan berkembang
+                  bersama, bertemu teman-teman baru yang luar biasa, dan berada
+                  di lingkungan yang sangat suportif. Penuh haru dengan sambutan
+                  hangat warga Desa Kepau Baru saat kami melakukan door to door
+                  maupun berjaga di posyandu .Setiap tatapan penuh rasa ingin
+                  tahu, setiap pertanyaan yang mereka ajukan adalah bukti betapa
+                  mereka peduli bukan hanya pada dirinya, tapi juga pada
+                  orang-orang yang mereka cintai. Harapan untuk lebih lama
+                  bersama keluarga, tetap kuat bekerja, dan menjalani hidup
+                  dengan penuh semangat. Dan sambutan hangat warga adalah
+                  pengingat bahwa kebaikan sekecil apa pun, selalu punya arti
+                  yang begitu besar. Terima Kasih IYES INDONESIA atas
+                  kesempatannya, semoga program IYES Mengajar terus berlanjut
+                  dan semakin berkembang, sehingga dapat menjangkau lebih banyak
+                  masyarakat serta memberikan edukasi kesehatan yang informatif
+                  sekaligus menyenangkan. Pengalaman yang benar-benar menjadi
+                  pelajaran berharga yang tidak terlupakan. “A moment, a lesson,
+                  a memory to keep“
                 </p>
+                <a
+                  href="#"
+                  class="read-more-link"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalMaysa"
+                  >Baca Selengkapnya →</a
+                >
               </div>
             </div>
-            <div class="col-md-6 col-lg-3 testimonial-item program-yvc">
+
+            <div class="col-md-6 col-lg-3 testimonial-item volunteer">
               <div class="alumni-card-classic">
-                <img
-                  src="../images/restu.jpg"
-                  class="alumni-photo"
-                  alt="Foto Restu Alfianita"
-                />
-                <h4 class="alumni-name">Restu Alfianita</h4>
-                <p class="alumni-batch">Ex-Vice Director</p>
+                <div class="member-photo-wrapper">
+                  <img
+                    src="../images/foto_testi/banyas_testi.JPG"
+                    class="alumni-photo"
+                    alt="Foto bnyas"
+                  />
+                </div>
+                <h4 class="alumni-name">Banyas Ambara</h4>
+                <p class="alumni-batch">Volunteer IYM 9</p>
                 <p class="alumni-quote">
-                  "Menjadi tim event IYES itu seru dan menantang. Saya belajar
-                  manajemen..."
+                  Aku Banyas Ambara, salah satu volunteer IYES Mengajar 9 di
+                  Desa Subayang Jaya. Jujur, banyak sekali hal yang Aku dapatkan
+                  selama pengabdian kemarin, mulai dari teamwork yang super
+                  solid, rasa syukur yang semakin tumbuh, sampai susah senang
+                  yang dijalani Bersama selama pengabdian. Pokoknya sangat
+                  berkesan. Harapan dari aku sendiri sih, tentunya IYES
+                  Indonesia harus terus growing dan bisa Go International.
                 </p>
+                <a
+                  href="#"
+                  class="read-more-link"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalBanyas"
+                  >Baca Selengkapnya →</a
+                >
               </div>
             </div>
-            <div class="col-md-6 col-lg-3 testimonial-item program-yvc">
+
+            <!-- <div class="col-md- col-lg-3 testimonial-item masyarakat">
               <div class="alumni-card-classic">
-                <img
-                  src="../images/restu.jpg"
-                  class="alumni-photo"
-                  alt="Foto Restu Alfianita"
-                />
-                <h4 class="alumni-name">Restu Alfianita</h4>
-                <p class="alumni-batch">Ex-Vice Director</p>
-                <p class="alumni-quote">
-                  "Menjadi tim event IYES itu seru dan menantang. Saya belajar
-                  manajemen..."
-                </p>
+                <div class="member-photo-wrapper">
+                  <img src="../images/foto_testi/.png" class="alumni-photo" alt="Foto eka" />
+                </div>
+                <h4 class="alumni-name">Eka</h4>
+                <p class="alumni-batch">Siswa SMA Terbuka desa Kepau Baru</p>
+                <p class="alumni-quote">"Menjadi tim event IYES itu seru dan menantang. Saya belajar manajemen..."</p>
+                <a href="#" class="read-more-link" data-bs-toggle="modal" data-bs-target="#modalSutrisno">Baca Selengkapnya →</a>
               </div>
-            </div>
-            <div class="col-md-6 col-lg-3 testimonial-item program-yvc">
-              <div class="alumni-card-classic">
-                <img
-                  src="../images/restu.jpg"
-                  class="alumni-photo"
-                  alt="Foto Restu Alfianita"
-                />
-                <h4 class="alumni-name">Restu Alfianita</h4>
-                <p class="alumni-batch">Ex-Vice Director</p>
-                <p class="alumni-quote">
-                  "Menjadi tim event IYES itu seru dan menantang. Saya belajar
-                  manajemen..."
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3 testimonial-item program-yvc">
-              <div class="alumni-card-classic">
-                <img
-                  src="../images/restu.jpg"
-                  class="alumni-photo"
-                  alt="Foto Restu Alfianita"
-                />
-                <h4 class="alumni-name">Restu Alfianita</h4>
-                <p class="alumni-batch">Ex-Vice Director</p>
-                <p class="alumni-quote">
-                  "Menjadi tim event IYES itu seru dan menantang. Saya belajar
-                  manajemen..."
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3 testimonial-item program-yvc">
-              <div class="alumni-card-classic">
-                <img
-                  src="../images/restu.jpg"
-                  class="alumni-photo"
-                  alt="Foto Restu Alfianita"
-                />
-                <h4 class="alumni-name">Restu Alfianita</h4>
-                <p class="alumni-batch">Ex-Vice Director</p>
-                <p class="alumni-quote">
-                  "Menjadi tim event IYES itu seru dan menantang. Saya belajar
-                  manajemen..."
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3 testimonial-item program-workshop">
-              <div class="alumni-card-classic">
-                <img
-                  src="../images/bivolll.png"
-                  class="alumni-photo"
-                  alt="Foto Restu Alfianita"
-                />
-                <h4 class="alumni-name">Restu Alfianita</h4>
-                <p class="alumni-batch">Ex-Vice Director</p>
-                <p class="alumni-quote">
-                  "Menjadi tim event IYES itu seru dan menantang. Saya belajar
-                  manajemen..."
-                </p>
-              </div>
-            </div>
+            </div> -->
+
+            <!-- Akhir Testii -->
           </div>
 
           <div class="text-center mt-5">
@@ -845,6 +953,438 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal Testi -->
+
+    <!-- <div class="modal fade" id="modalIneke" tabindex="-1" aria-labelledby="modalInekeLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalInekeLabel">Testimoni dari Ineke Rahmadini</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="../images/ineke.jpg" class="modal-alumni-photo" alt="Foto Ineke Rahmadini" />
+            <p class="paraghraph-alumni-quote">"Pengalaman menjadi volunteer di IYES Mengajar membuka mata saya. Saya belajar banyak dan bertemu orang-orang hebat. IYES adalah wadah luar biasa!"</p>
+            <footer class="blockquote-footer mt-3">Ineke Rahmadini, <cite>Ex-Executive Director</cite></footer>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div
+      class="modal fade"
+      id="modalHusnul"
+      tabindex="-1"
+      aria-labelledby="modalHusnulLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalHusnulLabel">
+              Testimoni dari Husnul Qadri Habibullah
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="../images/foto_testi/habib.png"
+              class="modal-alumni-photo"
+              alt="Foto Husnul Qadri Habibullah"
+            />
+            <p class="paraghraph-alumni-quote">
+              bergabung ke divisi Sosial Ekonomi di IYES dan kegiatan kami yaitu
+              buat Gula Cair dari Sagu dan ini pengalaman yg menarik. Jujur,
+              awalnya lumayan deg-degan, apalagi belum pernah buat gula cair
+              dari sagu. Kami harus putar otak, gimana caranya biar mereka paham
+              pada saat menjelaskan prosesnya. Awalnya ada aja yang bingung,
+              tapi kami coba terus jelaskan pelan-pelan. Akhirnya, mereka mulai
+              paham dan malah jadi semangat. Rasanya bangga banget bisa lihat
+              langsung antusiasme warga. Ini bukan cuma soal bikin produk, tapi
+              juga tentang kerja bareng tim yang solid. Kami saling support,
+              bantu cari solusi, dan lewatin semua kendala bareng-bareng.
+              Pengalaman ini benar-benar ngasih pelajaran berharga buat saya,
+              kalau kerjasama dan niat baik itu bisa ngerubah banyak hal.
+            </p>
+            <footer class="blockquote-footer mt-3">
+              Husnul Qadri Habibullah, <cite>Volunteer IYM 10</cite>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalBanyas"
+      tabindex="-1"
+      aria-labelledby="modalBanyasLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalBanyasLabel">
+              Testimoni dari Banyas Ambara
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="../images/foto_testi/banyas_testi.JPG"
+              class="modal-alumni-photo"
+              alt="Foto Banyas"
+            />
+            <p class="paraghraph-alumni-quote">
+              Aku Banyas Ambara, salah satu volunteer IYES Mengajar 9 di Desa
+              Subayang Jaya. Jujur, banyak sekali hal yang Aku dapatkan selama
+              pengabdian kemarin, mulai dari teamwork yang super solid, rasa
+              syukur yang semakin tumbuh, sampai susah senang yang dijalani
+              Bersama selama pengabdian. Pokoknya sangat berkesan. Harapan dari
+              aku sendiri sih, tentunya IYES Indonesia harus terus growing dan
+              bisa Go International.
+            </p>
+            <footer class="blockquote-footer mt-3">
+              Banyas Ambara, <cite>Volunteer IYM 9</cite>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalMaysa"
+      tabindex="-1"
+      aria-labelledby="modalMaysaLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalMaysaLabel">
+              Testimoni dari Maysa
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="../images/foto_testi/maysa_testi.jpeg"
+              class="modal-alumni-photo"
+              alt="Foto Maysa"
+            />
+            <p class="paraghraph-alumni-quote">
+              Sangat bersyukur bisa menjadi bagian dari program yang luas biasa
+              keren IYM 10 Mengajar, terlebih menjadi volunteer kesehatan yang
+              dimana selama kegiatan senang banget bisa berbagi ilmu, bertukar
+              pendapat, beproses dan berkembang bersama, bertemu teman-teman
+              baru yang luar biasa, dan berada di lingkungan yang sangat
+              suportif. Penuh haru dengan sambutan hangat warga Desa Kepau Baru
+              saat kami melakukan door to door maupun berjaga di posyandu
+              .Setiap tatapan penuh rasa ingin tahu, setiap pertanyaan yang
+              mereka ajukan adalah bukti betapa mereka peduli bukan hanya pada
+              dirinya, tapi juga pada orang-orang yang mereka cintai. Harapan
+              untuk lebih lama bersama keluarga, tetap kuat bekerja, dan
+              menjalani hidup dengan penuh semangat. Dan sambutan hangat warga
+              adalah pengingat bahwa kebaikan sekecil apa pun, selalu punya arti
+              yang begitu besar. Terima Kasih IYES INDONESIA atas kesempatannya,
+              semoga program IYES Mengajar terus berlanjut dan semakin
+              berkembang, sehingga dapat menjangkau lebih banyak masyarakat
+              serta memberikan edukasi kesehatan yang informatif sekaligus
+              menyenangkan. Pengalaman yang benar-benar menjadi pelajaran
+              berharga yang tidak terlupakan. “A moment, a lesson, a memory to
+              keep“
+            </p>
+            <footer class="blockquote-footer mt-3">
+              Mays, <cite>Volunteer IYM 10</cite>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalBgjer"
+      tabindex="-1"
+      aria-labelledby="modalBgjerLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalBgjerLabel">
+              Testimoni dari Jeremy Manik
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="../images/foto_testi/bgjer_testi.jpg"
+              class="modal-alumni-photo"
+              alt="Foto Bgjer"
+            />
+            <p class="paraghraph-alumni-quote">
+              My time as a volunteer was nothing short of transformative,
+              perfectly blending purpose with heart. The highlight was
+              undoubtedly stepping into the community to practically apply our
+              academic learning, which gave our knowledge a deeper meaning. But
+              beyond the service, the true magic lay in the powerful bonds we
+              forged; the shared commitment fostered an incredible sense of
+              ownership and care among every volunteer and IYES member, making
+              us feel like true siblings from another mothers🫶🤍 It was such a
+              fun and fulfilling ride—should we do it again?👀
+            </p>
+            <footer class="blockquote-footer mt-3">
+              Bang Jer, <cite>Volunteer IYM 10</cite>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalHaura"
+      tabindex="-1"
+      aria-labelledby="modalHauraLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalHauraLabel">
+              Testimoni dari PUBDOK GANG🤙
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="../images/foto_testi/haura_testi.jpg"
+              class="modal-alumni-photo"
+              alt="Foto Haura"
+            />
+            <p class="paraghraph-alumni-quote">
+              Hallo Sobat IYES, kenalin nama aku Azra Haura Dayani, aku adalah
+              seorang mahasiswa yg dulunya berpikir jika memasuki Dunia NGO
+              tidak akan berdampak banyak baik padaku. Tapi, saat pertama kali
+              aku mengenal IYES, aku pribadi merasakan hal berbeda. Kayak, saat
+              pertama kali aku mengikuti program YVC 2025, aku ngerasain dalam
+              pergaulannya yang dimana tujuan kami sama dan pemikiran yang sama.
+              Saat selesai mengikuti Program IYM 10 aku makin ngerasain sikap
+              kepedulian satu sama lainnya tanpa memandang latar belakang.
+              Disini aku juga mendapatkan kesempatan emas yang dimana aku
+              diterima menjadi salah satu anggota Volunteer IYM 10 dan masuk
+              divisi Pubdok. Didalam divisi ini juga aku belajar bagaimana
+              menangkap moment dalam sekejap dan lain². Didivisi ini ( Pubdok )
+              aku diterima baik dan diajari mulai dari awal tanpa adanya tindak
+              kekerasan senoritas ataupun sebagainya. Mereka memberi tauku
+              dengan sopan dan baik. Untuk itu, terima kasih IYES atas
+              kesempatannya😁
+            </p>
+            <footer class="blockquote-footer mt-3">
+              Haura, <cite>Volunteer IYM 10 dan YVC 2025</cite>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalArif"
+      tabindex="-1"
+      aria-labelledby="modalArifLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalArifLabel">
+              Testimoni dari Arif Rahman
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="../images/foto_testi/arif_testi.jpeg"
+              class="modal-alumni-photo"
+              alt="Foto Arif"
+            />
+            <p class="paraghraph-alumni-quote">
+              Jangan lihat apa yang diberikan, tetapi pergerakan apa yang mampu
+              kita lakukan untuk perubahan yang signifikan. Karna, sejauh apapun
+              kita melangkah kita pasti ingat tempat awal kita melangkah. Dan
+              sejauh apapun kita singgah, pasti kita semua menjalankan amanah.
+            </p>
+            <footer class="blockquote-footer mt-3">
+              Arif Rahman, <cite>Alumni IYES</cite>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalYosi"
+      tabindex="-1"
+      aria-labelledby="modalYosi"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalSutrisnoLabel">
+              Testimoni dari Yosivera Munthe
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="../images/foto_testi/yosi_testi.jpg"
+              class="modal-alumni-photo"
+              alt="Foto Yosi"
+            />
+            <p class="paraghraph-alumni-quote">
+              "Ekspetasi join volunteer itu ternyata dijawab sama IYES
+              Indonesia. Benar-benar sebagai ruang untuk bertumbuh. Awalnya join
+              YVC 2025 itu ga pernah bayangin bahwa relasi aku sendiri ga
+              berhenti hanya sampai di camping kemarin. Balik kegiatan ini,
+              benar-benar merasa memiliki keluarga meski jauh dari keluarga.
+              Thank You IYES Indonesia, semangat bertumbuh dan jadi kekuatan
+              baru yaa"
+            </p>
+            <footer class="blockquote-footer mt-3">
+              Yosivera Munthe, <cite>Volunteer YVC 2025</cite>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalFirman"
+      tabindex="-1"
+      aria-labelledby="modalFirman"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalSutrisnoLabel">
+              Testimoni dari Firman Riawan
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="../images/foto_testi/firman_testi.jpg"
+              class="modal-alumni-photo"
+              alt="Foto Firman"
+            />
+            <p class="paraghraph-alumni-quote">
+              Menurut saya sangat berdampak dalam mengisi pengetahuan toleransi
+              suku, ras, agama, bahkan dari di luar aspek 3 tadi, yang di mana
+              mengisi kekosongan mungkin dari layar belakang keluarga yang tidak
+              menggalakkan prihal toleransi, sehingga kita sudah ter bekali
+              kedepannya jika menjadi orang tua ataupun di lingkungan
+              masyarakat.
+            </p>
+            <footer class="blockquote-footer mt-3">
+              Firman Riawan, <cite>Volunteer YVC 2025</cite>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalPutri"
+      tabindex="-1"
+      aria-labelledby="modalPutri"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalSutrisnoLabel">
+              Testimoni dari Nareswari Putri Sestina
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="../images/foto_testi/putri_test.jpg"
+              class="modal-alumni-photo"
+              alt="Foto Putri"
+            />
+            <p class="paraghraph-alumni-quote">
+              waktu ikut event di YVC 2025, besssttt banget sih. selain dapat
+              extraordinary lessons and experience, di sini aku ketemu dengan
+              orang orang yang pasti nyaaa kereeeen kece dehh. ga hanya kereen
+              and kece dalam visual tapi kecee jugaa dalam segi ilmu dan
+              segudang experience nya. temen temen dari IYES jugaa humble and
+              warm, jadi ga kerasa awkward gituuu. i'm truly thankful karena
+              bisa berpartisipasi di event YVC 2025🫶🏻
+            </p>
+            <footer class="blockquote-footer mt-3">
+              Nareswari Putri Sestina, <cite>Volunteer YVC 2025</cite>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Akhir Modal -->
 
     <button id="scrollToTopBtn" title="Kembali ke atas">
       <i class="fas fa-arrow-up"></i>

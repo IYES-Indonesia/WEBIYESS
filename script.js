@@ -115,7 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const iso = new Isotope(grid, {
         itemSelector: ".testimonial-item",
         layoutMode: "fitRows",
-        // Atur agar item yang tampil (visible) yang di-layout
         visibleStyle: { display: "block", opacity: 1 },
         hiddenStyle: { display: "none", opacity: 0 },
       });
@@ -561,76 +560,38 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// ===================================================================
-// [BARU] fitur ubah bahasa indonesia dan inggris
-// ===================================================================
-function handleLanguageSwitcher() {
-  const langIdButton = document.getElementById("lang-id");
-  const langEnButton = document.getElementById("lang-en");
+// =============================================
+// FUNGSI BARU: TAB INTERAKTIF UNTUK HALAMAN DETAIL
+// =============================================
+function handleDivisionTabs() {
+  const tabContainer = document.querySelector(".division-tabs-nav");
+  if (!tabContainer) return;
 
-  // Fungsi untuk mendapatkan bahasa saat ini dari URL atau penyimpanan lokal
-  const getCurrentLanguage = () => {
-    const savedLang = localStorage.getItem("selectedLanguage");
-    // Jika URL mengandung .en.html, prioritaskan itu
-    if (window.location.pathname.endsWith(".en.html")) {
-      return "en";
+  const tabButtons = tabContainer.querySelectorAll(".division-tab-btn");
+  const tabPanes = document.querySelectorAll(".division-tab-pane");
+
+  tabContainer.addEventListener("click", function (e) {
+    const clickedButton = e.target.closest(".division-tab-btn");
+    if (!clickedButton) return;
+
+    // Nonaktifkan semua tombol dan panel
+    tabButtons.forEach((btn) => btn.classList.remove("active"));
+    tabPanes.forEach((pane) => pane.classList.remove("active"));
+
+    // Aktifkan tombol yang diklik
+    clickedButton.classList.add("active");
+
+    // Tampilkan panel yang sesuai
+    const targetPaneId = clickedButton.dataset.target;
+    const targetPane = document.querySelector(targetPaneId);
+    if (targetPane) {
+      targetPane.classList.add("active");
     }
-    // Jika tidak, gunakan bahasa yang tersimpan, atau default ke 'id'
-    return savedLang || "id";
-  };
-
-  // Fungsi untuk mengganti bahasa
-  const switchLanguage = (targetLang) => {
-    const currentLang = getCurrentLanguage();
-    if (currentLang === targetLang) return; // Tidak melakukan apa-apa jika bahasa sudah sama
-
-    localStorage.setItem("selectedLanguage", targetLang);
-    const currentPath = window.location.pathname;
-    let newPath;
-
-    if (targetLang === "en") {
-      // Mengubah dari ID ke EN: tambahkan .en sebelum .html
-      newPath = currentPath.replace(".html", ".en.html");
-    } else {
-      // Mengubah dari EN ke ID: hapus .en dari sebelum .html
-      newPath = currentPath.replace(".en.html", ".html");
-    }
-
-    // Atasi kasus khusus untuk halaman utama (index.html)
-    if (newPath.endsWith("/.en.html")) {
-      newPath = "/index.en.html";
-    } else if (currentPath.endsWith("/index.en.html") && targetLang === "id") {
-      newPath = "/index.html";
-    }
-
-    // Arahkan ke halaman baru
-    window.location.href = newPath;
-  };
-
-  // Fungsi untuk mengatur tampilan tombol ID/EN
-  const updateButtonState = () => {
-    const currentLang = getCurrentLanguage();
-    if (currentLang === "en") {
-      langEnButton.classList.add("active-lang");
-      langIdButton.classList.remove("active-lang");
-    } else {
-      langIdButton.classList.add("active-lang");
-      langEnButton.classList.remove("active-lang");
-    }
-  };
-
-  // Tambahkan event listener ke tombol
-  if (langIdButton && langEnButton) {
-    langIdButton.addEventListener("click", () => switchLanguage("id"));
-    langEnButton.addEventListener("click", () => switchLanguage("en"));
-  }
-
-  // Inisialisasi saat halaman dimuat
-  updateButtonState();
+  });
 }
 
-// Panggil fungsi baru ini di dalam blok eksekusi utama
+// Panggil fungsi baru ini di akhir event listener DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
-  // ... (semua fungsi handle... Anda yang sudah ada) ...
-  handleLanguageSwitcher(); // <-- Tambahkan baris ini
+  // ... (kode lama Anda di sini) ...
+  handleDivisionTabs(); // Tambahkan baris ini
 });
