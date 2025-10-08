@@ -69,8 +69,7 @@ body {
 a {
   color: var(--primary-color-orange);
   text-decoration: none;
-  transition: color var(--transition-speed) ease,
-    opacity var(--transition-speed) ease;
+  transition: color var(--transition-speed) ease, opacity var(--transition-speed) ease;
 }
 
 a:hover,
@@ -539,11 +538,7 @@ h6 {
    ============================================= */
 
 .featured-programs-v2 {
-  background: linear-gradient(
-    180deg,
-    var(--neutral-color-white) 0%,
-    var(--neutral-color-off-white) 100%
-  );
+  background: linear-gradient(180deg, var(--neutral-color-white) 0%, var(--neutral-color-off-white) 100%);
 }
 
 .program-card-v2 {
@@ -627,7 +622,7 @@ h6 {
 }
 
 /* =============================================
-  Slider Berita Utama di Beranda
+  Slider Berita Utama di Beranda INDEX
    ============================================= */
 
 .featured-news-card {
@@ -673,11 +668,7 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(0, 0, 0, 0) 60%
-  );
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 60%);
   z-index: 2;
   pointer-events: none;
 }
@@ -768,11 +759,6 @@ h6 {
   object-fit: cover;
   object-position: center;
   z-index: 1;
-  transition: transform 0.4s ease;
-}
-
-.featured-news-card:hover .card-img-bg {
-  transform: scale(1.03);
 }
 
 .featured-news-card::after {
@@ -782,11 +768,7 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(0, 0, 0, 0) 70%
-  );
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 70%);
   z-index: 2;
 }
 
@@ -976,20 +958,8 @@ h6 {
   padding: 20px 0;
   background: transparent;
   position: relative;
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent,
-    #000 15%,
-    #000 85%,
-    transparent
-  );
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    #000 15%,
-    #000 85%,
-    transparent
-  );
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
 }
 
 .logos-slide {
@@ -1080,11 +1050,7 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0) 60%
-  );
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 60%);
   z-index: 1;
   display: flex;
   align-items: flex-end;
@@ -1317,8 +1283,7 @@ h6 {
   text-align: center;
   border: 1px solid var(--border-color); /* Border default untuk staf */
   box-shadow: var(--box-shadow-soft);
-  transition: transform var(--transition-speed) ease,
-    box-shadow var(--transition-speed) ease;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
   height: 100%;
   overflow: hidden;
   display: flex;
@@ -1523,8 +1488,7 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: box-shadow var(--transition-speed) ease,
-    border-color var(--transition-speed) ease;
+  transition: box-shadow var(--transition-speed) ease, border-color var(--transition-speed) ease;
 }
 
 .alumni-card-classic:hover {
@@ -1862,11 +1826,7 @@ ul.list-styled-v2 i {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.5) 0%,
-    rgba(0, 0, 0, 0) 60%
-  );
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 60%);
   opacity: 0.8;
   transition: opacity 0.3s ease;
 }
@@ -2262,6 +2222,7 @@ ul.partner-list-v2 li i {
 }
 
 /* Kartu Berita Utama (Besar) */
+
 .featured-news-card-large {
   position: relative;
   border-radius: var(--border-radius-large);
@@ -2271,13 +2232,47 @@ ul.partner-list-v2 li i {
   flex-direction: column;
   justify-content: flex-end;
   width: 100%;
-  min-height: 450px; /* Memberi tinggi minimum agar tidak terlalu pendek */
+  min-height: 450px;
   text-decoration: none;
-  transition: box-shadow var(--transition-speed) ease;
 }
-.featured-news-card-large:hover {
-  box-shadow: var(--box-shadow-medium);
+
+/* Pastikan Carousel dan itemnya mengisi penuh wadah */
+.featured-news-card-large.carousel,
+.featured-news-card-large .carousel-inner,
+.featured-news-card-large .carousel-item {
+  height: 100%;
 }
+
+/* Pastikan tombol navigasi slider berada di lapisan paling atas agar bisa diklik */
+.featured-news-card-large .carousel-control-prev,
+.featured-news-card-large .carousel-control-next {
+  z-index: 6;
+}
+
+/* Gaya untuk indikator (titik-titik) */
+.featured-news-card-large .carousel-indicators {
+  z-index: 4;
+  bottom: 20px;
+}
+
+/* Gaya untuk link di dalam judul */
+.featured-news-card-large .card-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.news-category-large {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+  width: 150px;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
 .featured-news-card-large .card-img-bg {
   position: absolute;
   top: 0;
@@ -2298,11 +2293,7 @@ ul.partner-list-v2 li i {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(0, 0, 0, 0) 70%
-  );
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 70%);
   z-index: 2;
 }
 .featured-news-card-large .card-overlay-content {
@@ -2396,6 +2387,18 @@ ul.partner-list-v2 li i {
   display: block;
 }
 
+/* Gaya untuk subjudul section dan dropdown urutkan */
+.section-subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color-dark-blue);
+}
+
+.dropdown-menu-end {
+  right: 0;
+  left: auto;
+}
+
 /* --- Seksi Promo Laporan Tahunan --- */
 .report-promo-section {
   padding-bottom: 5rem;
@@ -2403,11 +2406,7 @@ ul.partner-list-v2 li i {
 }
 
 .report-promo-card {
-  background: linear-gradient(
-    to right,
-    var(--primary-color-dark-blue),
-    var(--accent-color-medium-blue)
-  );
+  background: linear-gradient(to right, var(--primary-color-dark-blue), var(--accent-color-medium-blue));
   border-radius: 12px;
   color: var(--neutral-color-white);
   padding: 2.5rem;
@@ -2538,20 +2537,12 @@ ul.partner-list-v2 li i {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(0, 0, 0, 0) 60%
-  );
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 60%);
   z-index: 2;
   transition: background 0.3s ease;
 }
 .report-showcase-card:hover::before {
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0) 70%
-  );
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 70%);
 }
 .report-showcase-card .card-img {
   position: absolute;
@@ -2639,8 +2630,7 @@ ul.partner-list-v2 li i {
   background-color: var(--neutral-color-white);
   border-radius: 15px; /* Bisa dibuat variabel jika ingin konsisten */
   box-shadow: var(--box-shadow-medium);
-  transition: transform var(--transition-speed) ease,
-    box-shadow var(--transition-speed) ease;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -2733,8 +2723,7 @@ body.partnership-page {
   border: 1px solid #e9ecef;
   border-radius: 12px;
   height: 100%;
-  transition: transform var(--transition-speed) ease,
-    box-shadow var(--transition-speed) ease;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
 .benefit-card:hover {
@@ -2830,11 +2819,7 @@ body.partnership-page {
 /* --- Bagian Jembatan Emosional (Next Story) --- */
 .next-story-section {
   padding: 5rem 0;
-  background: linear-gradient(
-    45deg,
-    var(--primary-color-dark-blue),
-    var(--accent-color-medium-blue)
-  );
+  background: linear-gradient(45deg, var(--primary-color-dark-blue), var(--accent-color-medium-blue));
   color: var(--neutral-color-white);
 }
 
@@ -3118,8 +3103,7 @@ body.partnership-page {
   color: rgba(var(--neutral-color-white-rgb), 0.75);
   font-size: 1.5rem;
   margin-right: 18px;
-  transition: color var(--transition-speed) ease,
-    transform var(--transition-speed) ease;
+  transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
 }
 
 #footer .footer-social-media a:hover {

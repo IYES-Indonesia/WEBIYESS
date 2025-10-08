@@ -26,9 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- Active Link Highlighting (VERSI BARU & LEBIH BAIK) ---
     const currentPath = window.location.pathname; // Contoh: "/tentang-iyes/tentang-kami.html"
-    const navLinks = document.querySelectorAll(
-      ".nav-links > .nav-item > .nav-link"
-    );
+    const navLinks = document.querySelectorAll(".nav-links > .nav-item > .nav-link");
 
     // Hapus semua class aktif terlebih dahulu untuk reset
     navLinks.forEach((link) => {
@@ -144,9 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Cek visibilitas tombol
       function checkButtonVisibility() {
-        const currentFilter = filterButtons
-          .querySelector(".active")
-          .getAttribute("data-filter");
+        const currentFilter = filterButtons.querySelector(".active").getAttribute("data-filter");
         if (currentFilter !== "*") {
           loadMoreBtn.style.display = "none";
           showLessBtn.style.display = "none";
@@ -261,12 +257,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (slider && prevButton && nextButton) {
       const scrollAmount = 300;
-      nextButton.addEventListener("click", () =>
-        slider.scrollBy({ left: scrollAmount, behavior: "smooth" })
-      );
-      prevButton.addEventListener("click", () =>
-        slider.scrollBy({ left: -scrollAmount, behavior: "smooth" })
-      );
+      nextButton.addEventListener("click", () => slider.scrollBy({ left: scrollAmount, behavior: "smooth" }));
+      prevButton.addEventListener("click", () => slider.scrollBy({ left: -scrollAmount, behavior: "smooth" }));
     }
   }
 
@@ -275,9 +267,7 @@ document.addEventListener("DOMContentLoaded", () => {
    */
   function handleProgramFilter() {
     const filterContainer = document.querySelector(".program-filters");
-    const programItems = document.querySelectorAll(
-      "#program-grid .program-item"
-    );
+    const programItems = document.querySelectorAll("#program-grid .program-item");
 
     if (filterContainer && programItems.length > 0) {
       filterContainer.addEventListener("click", function (e) {
@@ -291,10 +281,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         programItems.forEach((item) => {
           const itemCategory = item.getAttribute("data-category");
-          if (
-            filterValue === "*" ||
-            (itemCategory && itemCategory.includes(filterValue))
-          ) {
+          if (filterValue === "*" || (itemCategory && itemCategory.includes(filterValue))) {
             item.style.display = "block";
           } else {
             item.style.display = "none";
@@ -369,9 +356,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const startIndex = (page - 1) * itemsPerPage;
       const endIndex = startIndex + itemsPerPage;
 
-      items
-        .slice(startIndex, endIndex)
-        .forEach((item) => item.classList.add("active"));
+      items.slice(startIndex, endIndex).forEach((item) => item.classList.add("active"));
 
       renderButtons();
 
@@ -409,6 +394,40 @@ document.addEventListener("DOMContentLoaded", () => {
     displayPage(1);
   }
 
+  function handleNewsSort() {
+    const sortDropdown = document.getElementById("sortDropdown");
+    const grid = document.getElementById("newsGrid");
+
+    if (!sortDropdown || !grid) {
+      return; // Keluar jika elemen tidak ada
+    }
+
+    // Event listener untuk setiap pilihan di dropdown
+    const dropdownItems = document.querySelectorAll(".dropdown-item[data-sort]");
+    dropdownItems.forEach((item) => {
+      item.addEventListener("click", function () {
+        const sortBy = this.getAttribute("data-sort");
+
+        // Ambil semua item berita dari grid
+        const items = Array.from(grid.querySelectorAll(".news-item"));
+
+        // Lakukan pengurutan
+        if (sortBy === "newest") {
+          items.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+        } else if (sortBy === "oldest") {
+          items.sort((a, b) => new Date(a.dataset.date) - new Date(b.dataset.date));
+        }
+
+        // Render ulang item di DOM dengan urutan yang baru
+        grid.innerHTML = ""; // Kosongkan grid
+        items.forEach((item) => grid.appendChild(item)); // Tambahkan kembali dengan urutan baru
+
+        // PENTING: Panggil kembali fungsi paginasi untuk menampilkan halaman pertama dari hasil urutan baru
+        handleNewsPagination();
+      });
+    });
+  }
+
   // =============================================
   // BAGIAN 3: EKSEKUSI SEMUA FUNGSI
   // =============================================
@@ -421,6 +440,7 @@ document.addEventListener("DOMContentLoaded", () => {
   handleArchiveSlider();
   handleProgramFilter();
   handleNewsPagination();
+  handleNewsSort();
 });
 
 // ===================================================================
