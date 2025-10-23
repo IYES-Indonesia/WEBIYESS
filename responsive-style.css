@@ -120,6 +120,22 @@
     border-bottom: none;
   }
 
+  /* Sembunyikan ikon di dalam submenu pada mode mobile */
+  .mega-menu-link-item i {
+    display: none;
+  }
+
+  /* (Opsional) Sesuaikan padding agar teks rata kiri dengan rapi */
+  .mega-menu-link-item .item-text {
+    text-align: left;
+    width: 100%;
+    /* padding-left: 2rem; Memberi sedikit indentasi */
+  }
+
+  .mega-menu-link-item {
+    justify-content: flex-start; /* Membuat item rata kiri */
+  }
+
   /* Rotasi panah dropdown saat aktif */
   .nav-links .dropdown-toggle::after {
     transition: transform 0.3s ease;
@@ -229,5 +245,248 @@
     100% {
       transform: translateX(calc(-200px * 6));
     }
+  }
+}
+
+/* ========== RESPONSIVE SCOPE  ========== */
+@media (max-width: 768px) {
+  .modal-dialog {
+    width: 95vw !important;
+    margin: 1rem auto;
+  }
+
+  .modal-content {
+    border-radius: 12px;
+    padding: 0.25rem !important;
+  }
+
+  .modal-header {
+    margin-top: 2px;
+    padding: 0.75rem 1rem;
+    text-align: center;
+  }
+
+  .modal-title {
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Body otomatis scroll jika isi panjang */
+  .modal-body {
+    max-height: 70vh; /* sedikit lebih pendek di mobile */
+    padding: 1rem;
+    overflow-y: auto;
+  }
+
+  /* Gambar carousel rapi */
+  .chapter-gallery img {
+    border-radius: 10px;
+  }
+
+  /* Footer stack vertikal */
+  .modal-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .modal-footer .social-link-modal {
+    justify-content: center;
+  }
+
+  /* Statistik & Mitra lebih kompak */
+  .stat-item-v2 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stat-item-v2 i {
+    margin-bottom: 0.4rem;
+  }
+
+  .partner-list-v2 li {
+    font-size: 0.9rem;
+  }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 992px) {
+  .scope-objectives {
+    margin-left: 1.25rem;
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-section-scope .section-title-left {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .page-section-scope p {
+    text-align: justify;
+  }
+
+  .scope-objectives {
+    margin-left: 0.5rem;
+    border-left: 2px solid var(--primary-color-orange, #ff5b23);
+  }
+
+  .scope-objectives li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Perkecil indicator agar tidak menutupi gambar */
+  .carousel-indicators {
+    bottom: 5px;
+  }
+
+  .carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 992px) {
+  .modal-body {
+    padding: 1.5rem !important;
+  }
+  .stat-item-v2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-body {
+    padding: 1.25rem !important;
+  }
+
+  .modal-body .modal-subtitle {
+    font-size: 1rem;
+  }
+
+  .modal-body p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  ul.partner-list-v2 li,
+  .stat-item-v2 {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+
+  .modal-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-link-modal {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    border-radius: 0.75rem;
+  }
+  .stat-item-v2 i {
+    font-size: 1.2rem;
+  }
+  .modal-body .modal-subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .scope-carousel {
+    max-width: 550px;
+  }
+
+  .scope-carousel img {
+    height: 260px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .scope-carousel {
+    max-width: 90%;
+  }
+
+  .scope-carousel img {
+    height: 220px;
+  }
+
+  .scope-carousel .carousel-indicators {
+    bottom: 5px;
+  }
+
+  .scope-carousel .carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .scope-carousel img {
+    height: 180px;
+  }
+}
+
+/* ============== Font Judul berita INDEX ===============*/
+/* Saat mode tablet */
+@media (max-width: 992px) {
+  .featured-news-card .card-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* Saat mode mobile */
+@media (max-width: 768px) {
+  .featured-news-card .card-title {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+}
+
+/* Mode kecil banget (hp mini) */
+@media (max-width: 480px) {
+  .featured-news-card .card-title {
+    font-size: 0.9rem;
+  }
+}
+
+/* =================== Font Judul berita BERITA CERITA ===============*/
+/* Saat mode tablet */
+@media (max-width: 992px) {
+  .featured-news-card-large .card-title {
+    font-size: 1.4rem;
+  }
+}
+
+/* Saat mode mobile */
+@media (max-width: 768px) {
+  .featured-news-card-large .card-title {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+}
+
+/* Mode kecil banget (hp mini) */
+@media (max-width: 480px) {
+  .featured-news-card-large .card-title {
+    font-size: 1rem;
   }
 }

@@ -153,26 +153,6 @@ h6 {
 
 /* Header & Navigasi
    =================================================================== */
-/* #header {
-  background-color: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-
-  height: var(--header-height);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1030;
-}
-
-#header .main-nav {
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-} */
 
 #header {
   background-color: rgba(255, 255, 255, 0.97);
@@ -323,7 +303,7 @@ h6 {
 .mega-menu-link-item {
   display: flex;
   align-items: center;
-  padding: 0.75rem;
+  padding: 0.75rem 1rem;
   border-radius: var(--border-radius-base);
   transition: background-color var(--transition-speed) ease;
   text-decoration: none !important;
@@ -786,7 +766,7 @@ h6 {
 
 .featured-news-card .card-title {
   bottom: 90px;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 700;
   line-height: 1.3;
   color: var(--neutral-color-white);
@@ -1299,7 +1279,8 @@ h6 {
   height: 140px;
   border-radius: 50%;
   margin: 1.5rem auto 1rem;
-  border: 3px solid var(--neutral-color-light-gray);
+  /* border untuk head */
+  border: 3px solid var(--accent-color-yellow-orange);
   box-shadow: var(--box-shadow-soft);
   overflow: hidden;
   position: relative;
@@ -1429,8 +1410,7 @@ h6 {
 
 /* 3. Untuk Head & Manager */
 .team-member-card.card-head-manager {
-  background-color: #f6ae2d; /* Warna orange sesuai diagram */
-  color: var(--primary-color-dark-blue);
+  border-color: var(--accent-color-yellow-orange);
 }
 
 .team-member-card.card-head-manager .member-name {
@@ -1454,7 +1434,7 @@ h6 {
 }
 
 .team-member-card.card-volunteer .member-photo-wrapper {
-  border-color: #7ba7bc;
+  border-color: var(--neutral-color-light-gray);
 }
 
 /* --- Bagian Kartu Testimoni Alumni (Revisi Profesional) --- */
@@ -1675,7 +1655,6 @@ h6 {
 .page-hero {
   position: relative;
   padding: 8rem 0;
-  color: var(--neutral-color-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1701,7 +1680,7 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(var(--primary-color-dark-blue-rgb), 0.6);
+  background-color: rgba(var(--primary-color-dark-blue-rgb), 0.4);
   z-index: 2;
 }
 
@@ -2132,7 +2111,128 @@ ul.list-styled-v2 i {
   background-color: var(--neutral-color-off-white);
 }
 
+/* === PAGE HERO === */
+.page-hero {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 6rem 0;
+  background-color: #000;
+}
+.page-hero .hero-background-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  z-index: 0;
+}
+.page-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* === SECTION SCOPE === */
+.page-section-scope {
+  position: relative;
+  background-color: var(--neutral-color-light-gray, #f8f9fa);
+}
+
+.page-section-scope .section-title-left {
+  font-weight: 700;
+  color: var(--primary-color-dark-blue, #002b5b);
+  margin-bottom: 1.25rem;
+}
+
+.page-section-scope p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-color-dark, #333);
+}
+
+.scope-objectives {
+  margin-top: 1.5rem;
+  margin-left: 2rem; /* Geser seluruh list ke kanan */
+  border-left: 3px solid var(--primary-color-orange, #ff5b23);
+  padding-left: 1.25rem; /* Jarak teks dari garis kiri */
+}
+
+.scope-objectives li {
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-color-dark, #333);
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.scope-objectives li i {
+  color: var(--primary-color-orange, #ff5b23);
+  margin-top: 3px;
+  font-size: 1rem;
+}
+
+.scope-objectives li:hover {
+  transform: translateX(5px);
+  color: var(--primary-color-dark-blue, #003366);
+}
+
+/* === RESPONSIVE MODAL FIX === */
+.modal-dialog {
+  max-width: 90vw;
+}
+
+.modal-content {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* Scrollable body agar header & footer tetap terlihat */
+.modal-body {
+  max-height: 75vh; /* tinggi maksimal relatif terhadap viewport */
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+/* Header dan footer tetap */
+.modal-header,
+.modal-footer {
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+}
+
+/* Footer tetap nyaman dibaca */
+.modal-footer {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+}
+
 /* Gaya untuk konten di dalam Modal */
+/* === SCOPE MODAL: RESPONSIVE IMPROVEMENT === */
+.modal-content {
+  border-radius: var(--border-radius-large, 1rem);
+  overflow: hidden;
+}
+
+.modal-body {
+  padding: 1.75rem;
+}
+
+.modal-body img,
+.chapter-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-base, 0.75rem);
+  object-fit: cover;
+}
+
+/* Subtitle */
 .modal-body .modal-subtitle {
   font-weight: 700;
   color: var(--primary-color-dark-blue);
@@ -2140,16 +2240,10 @@ ul.list-styled-v2 i {
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--primary-color-orange);
   display: inline-block;
+  font-size: 1.05rem;
 }
 
-.detail-highlight-box {
-  background-color: var(--neutral-color-off-white);
-  padding: 1.5rem;
-  border-radius: var(--border-radius-base);
-  height: 100%;
-}
-
-/* Gaya BARU untuk item statistik */
+/* Statistik Item */
 .stat-item-v2 {
   display: flex;
   align-items: center;
@@ -2157,14 +2251,21 @@ ul.list-styled-v2 i {
   padding: 1rem;
   border-radius: var(--border-radius-base);
   border: 1px solid var(--border-color);
+  margin-bottom: 0.75rem;
+  transition: background-color 0.3s ease;
+}
+
+.stat-item-v2:hover {
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 .stat-item-v2 i {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--primary-color-orange);
   margin-right: 1rem;
-  width: 40px;
+  width: 38px;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .stat-item-v2 .stat-value {
@@ -2177,12 +2278,14 @@ ul.list-styled-v2 i {
 .stat-item-v2 .stat-label {
   font-size: 0.9rem;
   color: var(--text-color-muted);
+  line-height: 1.4;
 }
 
-/* Gaya BARU untuk daftar mitra */
+/* Daftar Mitra */
 ul.partner-list-v2 {
   list-style: none;
   padding-left: 0;
+  margin: 0;
 }
 
 ul.partner-list-v2 li {
@@ -2196,14 +2299,26 @@ ul.partner-list-v2 li {
   color: var(--text-color-dark);
   font-size: 0.95rem;
   border: 1px solid var(--border-color);
+  transition: background-color 0.3s ease;
+}
+
+ul.partner-list-v2 li:hover {
+  background-color: rgba(0, 0, 0, 0.04);
 }
 
 ul.partner-list-v2 li i {
   color: var(--accent-color-medium-blue);
   margin-right: 0.75rem;
+  font-size: 1.1rem;
 }
 
-/* Gaya untuk link sosial media di footer modal */
+/* Social Link Footer */
+.modal-footer {
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+}
+
 .modal-footer .social-link-modal {
   display: inline-flex;
   align-items: center;
@@ -2214,11 +2329,62 @@ ul.partner-list-v2 li i {
   font-weight: 500;
   transition: color 0.3s ease;
 }
+
 .modal-footer .social-link-modal:hover {
   color: var(--accent-color-yellow-orange);
 }
+
 .modal-footer .social-link-modal i {
   font-size: 1.2rem;
+}
+
+/* === Carousel Scope (Umum) === */
+.scope-carousel {
+  margin: 0 auto;
+}
+
+.scope-carousel img {
+  height: 420px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* === Indicators === */
+.scope-carousel .carousel-indicators {
+  bottom: 10px;
+}
+
+.scope-carousel .carousel-indicators [data-bs-target] {
+  background-color: var(--primary-color-orange, #f15a24);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.scope-carousel .carousel-indicators .active {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+/* === Controls === */
+.scope-carousel .carousel-control-prev-icon,
+.scope-carousel .carousel-control-next-icon {
+  filter: invert(1) brightness(1.2);
+  background-size: 100%;
+}
+
+.scope-carousel .carousel-control-prev,
+.scope-carousel .carousel-control-next {
+  width: 10%;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.scope-carousel .carousel-control-prev:hover,
+.scope-carousel .carousel-control-next:hover {
+  opacity: 1;
 }
 
 /* =============================================
@@ -2387,7 +2553,7 @@ ul.partner-list-v2 li i {
   padding: 2rem 2.5rem;
 }
 .featured-news-card-large .card-title {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 700;
   line-height: 1.3;
   color: var(--neutral-color-white);
@@ -2927,76 +3093,93 @@ ul.partner-list-v2 li i {
    =================================================================== */
 
 .featured-report-section {
-  padding: 80px 0;
+  background-color: #f9fafc;
+  border-radius: 12px;
+  padding: 2rem;
 }
 
 .featured-report {
   display: flex;
   align-items: center;
-  gap: 60px;
+  justify-content: space-between;
+  gap: 2.5rem;
+  flex-wrap: wrap;
 }
 
-.report-cover {
-  flex-basis: 40%;
-}
-
+/* Cover */
 .report-cover img {
   width: 100%;
-  max-width: 380px;
-  border-radius: 8px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
 }
 
-.report-cover img:hover {
-  transform: scale(1.03);
-}
-
+/* Detail */
 .report-details {
-  flex-basis: 60%;
+  flex: 1;
+  min-width: 300px;
 }
 
-.report-details h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+.report-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color-dark-blue);
+  margin-bottom: 0.5rem;
 }
 
-.report-details .report-theme {
-  font-size: 1.3rem;
-  color: var(--accent-color-medium-blue);
+.report-theme {
   font-weight: 600;
-  margin-bottom: 20px;
+  color: var(--primary-color-orange);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
 }
 
-.report-details .executive-summary {
-  margin-bottom: 30px;
-  color: var(--text-color-muted);
+.executive-summary {
+  font-size: 0.95rem;
+  color: var(--text-color-dark);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
 }
 
+/* Highlight */
 .key-highlights {
   display: flex;
-  gap: 15px;
-  margin-bottom: 40px;
   flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .highlight-item {
   display: flex;
   align-items: center;
-  gap: 12px;
   background-color: var(--neutral-color-light-gray);
-  padding: 10px 15px;
-  border-radius: 50px;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  flex: 1 1 30%;
+  min-width: 180px;
+  border: 1px solid #e5e5e5;
 }
 
 .highlight-item i {
-  font-size: 1.5rem;
-  color: var(--accent-color-medium-blue);
+  color: var(--primary-color-orange);
+  margin-right: 0.6rem;
+  font-size: 1.2rem;
 }
 
-.highlight-item span {
-  font-weight: 500;
-  font-size: 0.9rem;
+/* Tombol Download */
+.download-btn {
+  background-color: var(--primary-color-orange);
+  border: none;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #e05d00;
 }
 
 .final-cta-section {

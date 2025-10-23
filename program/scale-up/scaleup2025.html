@@ -177,7 +177,6 @@
           <li class="nav-item">
             <a class="nav-link" href="../../kontak.html">Kontak</a>
           </li>
-          
         </ul>
         <button class="menu-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
       </nav>
@@ -186,66 +185,62 @@
     <main>
       <section class="scaleup-section page-section py-5">
         <div class="container">
-          <a href="scaleup1.html" class="back-link">
-            <i class="fas fa-arrow-left"></i>
-            Kembali ke Halaman Scale Up
-          </a>
+          <!-- Tombol Kembali -->
+          <a href="scaleup1.html" class="back-link mb-4 d-inline-block"> <i class="fas fa-arrow-left me-2"></i> Kembali ke Halaman Scale Up </a>
+
+          <!-- Header -->
           <div class="text-center mb-5">
-            <h2 class="section-title">Scale Up 2024</h2>
-            <p class="section-intro">Program peningkatan kapasitas untuk internal IYES Indonesia dalam bentuk workshop dan sesi berbagi dari para ahli di bidangnya.</p>
+            <h2 class="section-title">Scale Up 2025</h2>
+            <p class="section-intro">Program peningkatan kapasitas internal IYES Indonesia yang berfokus pada pemahaman dan pengukuran dampak program secara menyeluruh menggunakan pendekatan MEL (Monitoring, Evaluation, and Learning).</p>
           </div>
 
-          <!-- <div class="scale-filters text-center mb-5">
-            <button class="btn btn-outline-primary active" data-filter="session1">Session 1</button> 
-            <button class="btn btn-outline-primary" data-filter="session2">Session 2: Fotografi</button>
-            <button class="btn btn-outline-primary" data-filter="session3">Session 3: Visual Canva</button>
-          </div> -->
+          <!-- Filter Buttons -->
+          <div class="scale-filters text-center mb-5 d-flex flex-wrap justify-content-center gap-3">
+            <button class="btn btn-outline-primary active" data-filter="session1">Session 1: Monitoring & Evaluation</button>
+            <!-- <button class="btn btn-outline-primary" data-filter="session2">Session 2: Learning Implementation</button> -->
+          </div>
+
+          <!-- SESSIONS -->
           <div class="row gy-5">
-            <!-- 1 -->
+            <!-- === SESSION 1 === -->
             <div class="col-12 scaleup-item" data-category="session1">
-              <div class="card p-4 shadow-sm">
-                <div class="row g-4 align-items-center">
-                  <div class="col-lg-12">
-                    <div class="chapter-gallery">
-                      <div id="carouselChapter1Detail" class="carousel slide h-100" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselChapter1Detail" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselChapter1Detail" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselChapter1Detail" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <div class="card p-4 shadow-sm scaleup-card">
+                <div class="row g-4 align-items-center flex-column flex-lg-row">
+                  <!-- Carousel -->
+                  <div class="col-lg-6">
+                    <div id="carouselSession1_2025" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner rounded-3 overflow-hidden">
+                        <div class="carousel-item active">
+                          <img src="../../images/foto_scaleup/25-1.jpg" class="d-block w-100" alt="Scale Up 2025 Session 1" />
                         </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="../../images/foto_scaleup/25-1.jpg" class="d-block w-100" alt="Suasana Mengajar di Chapter 1" />
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../../images/foto_scaleup/25-2.jpg" class="d-block w-100" alt="Anak-anak di Pojok Baca" />
-                          </div>
-                          <!-- <div class="carousel-item">
-                            <img src="../../images/foto_scaleup/24-4.jpg" class="d-block w-100" alt="Foto Bersama Volunteer dan Siswa" />
-                          </div> -->
+                        <div class="carousel-item">
+                          <img src="../../images/foto_scaleup/25-2.jpg" class="d-block w-100" alt="Scale Up 2025 Session 1 Photo 2" />
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselChapter1Detail" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselChapter1Detail" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
-                        </button>
                       </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselSession1_2025" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselSession1_2025" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                      </button>
                     </div>
-                    <div class="col-lg-7">
-                      <div class="session-meta d-flex flex-wrap mb-2">
-                        <span class="meta-item"><i class="fas fa-calendar-alt"></i>06 Juli 2025</span>
-                        <span class="meta-item"><i class="fas fa-map-marker-alt"></i>EDDS Waffle Pekanbaru & via Zoom Meeting</span>
-                      </div>
-                      <h3 class="card-title mt-2">Memahami dan Mengukur Dampak serta Manfaat Program secara Komprehensif</h3>
-                      <p class="session-theme fst-italic text-secondary">"MEL (Monitoring, Evaluation, and Learning)"</p>
-                      <div class="session-speaker d-flex align-items-center gap-3 mt-4">
-                        <img src="https://placehold.co/64x64/094162/FFFFFF?text=MFA" alt="Foto M. Fadhil Andika Putra" class="rounded-circle" />
-                        <div>
-                          <p class="mb-0 text-muted small">Pembicara</p>
-                          <h5 class="mb-1 text-dark">Abrar Ashari Siregar</h5>
-                          <p class="mb-0 text-muted small">(MEL Specialist/Consultant</p>
-                        </div>
+                  </div>
+
+                  <!-- Konten -->
+                  <div class="col-lg-6 session-content">
+                    <div class="session-meta d-flex flex-wrap mb-2">
+                      <span class="meta-item"><i class="fas fa-calendar-alt"></i> 6 Juli 2025</span>
+                      <span class="meta-item"><i class="fas fa-map-marker-alt"></i> Eds Waffle Pekanbaru & Zoom Meeting</span>
+                    </div>
+                    <h3 class="card-title">Memahami dan Mengukur Dampak serta Manfaat Program secara Komprehensif</h3>
+                    <p class="session-theme fst-italic text-secondary">“Penerapan MEL (Monitoring, Evaluation, and Learning) dalam peningkatan efektivitas program sosial.”</p>
+
+                    <div class="session-speaker d-flex align-items-center gap-3 mt-4">
+                      <img src="https://placehold.co/64x64/094162/FFFFFF?text=AS" alt="Abrar Ashari Siregar" class="rounded-circle" />
+                      <div>
+                        <p class="mb-0 text-muted small">Pembicara</p>
+                        <h5 class="mb-1 text-dark">Abrar Ashari Siregar</h5>
+                        <p class="mb-0 text-muted small">MEL Specialist / Consultant</p>
                       </div>
                     </div>
                   </div>
@@ -253,12 +248,13 @@
               </div>
             </div>
 
-            
+            <!-- === SESSION 2 === -->
+          </div>
         </div>
       </section>
     </main>
 
-   <footer id="footer">
+    <footer id="footer">
       <div class="container">
         <div class="footer-content row py-5">
           <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 footer-info">

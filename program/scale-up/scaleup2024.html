@@ -185,66 +185,60 @@
     <main>
       <section class="scaleup-section page-section py-5">
         <div class="container">
-          <a href="scaleup1.html" class="back-link">
-            <i class="fas fa-arrow-left"></i>
-            Kembali ke Halaman Scale Up
-          </a>
+          <a href="scaleup1.html" class="back-link mb-4 d-inline-block"> <i class="fas fa-arrow-left me-2"></i> Kembali ke Halaman Scale Up </a>
+
           <div class="text-center mb-5">
             <h2 class="section-title">Scale Up 2024</h2>
             <p class="section-intro">Program peningkatan kapasitas untuk internal IYES Indonesia dalam bentuk workshop dan sesi berbagi dari para ahli di bidangnya.</p>
           </div>
 
-          <div class="scale-filters text-center mb-5">
-            <button class="btn btn-outline-primary active" data-filter="session1">Session 1: Fotografi</button>
-            <button class="btn btn-outline-primary" data-filter="session2">Session 2: Fotografi</button>
+          <!-- Filter Buttons -->
+          <div class="scale-filters text-center mb-5 d-flex flex-wrap justify-content-center gap-3">
+            <button class="btn btn-outline-primary active" data-filter="session1">Session 1 & 2: Fotografi</button>
+            <!-- <button class="btn btn-outline-primary" data-filter="session2">Session 2: Fotografi</button> -->
             <button class="btn btn-outline-primary" data-filter="session3">Session 3: Visual Canva</button>
           </div>
+
           <div class="row gy-5">
-            <!-- 1 -->
+            <!-- === Session 1 === -->
             <div class="col-12 scaleup-item" data-category="session1">
               <div class="card p-4 shadow-sm">
-                <div class="row g-4 align-items-center">
-                  <div class="col-lg-12">
-                    <div class="chapter-gallery">
-                      <div id="carouselChapter1Detail" class="carousel slide h-100" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselChapter1Detail" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselChapter1Detail" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselChapter1Detail" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <div class="row g-4 align-items-center flex-column flex-lg-row">
+                  <div class="col-lg-6">
+                    <div id="carouselSession1" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner rounded-3 overflow-hidden">
+                        <div class="carousel-item active">
+                          <img src="../../images/foto_scaleup/24-1.jpg" class="d-block w-100" alt="Scale Up 2024 - 1" />
                         </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="../../images/foto_scaleup/24-1.jpg" class="d-block w-100" alt="Suasana Mengajar di Chapter 1" />
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../../images/foto_scaleup/24-2.jpg" class="d-block w-100" alt="Anak-anak di Pojok Baca" />
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../../images/foto_scaleup/24-4.jpg" class="d-block w-100" alt="Foto Bersama Volunteer dan Siswa" />
-                          </div>
+                        <div class="carousel-item">
+                          <img src="../../images/foto_scaleup/24-2.jpg" class="d-block w-100" alt="Scale Up 2024 - 2" />
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselChapter1Detail" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselChapter1Detail" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
-                        </button>
+                        <div class="carousel-item">
+                          <img src="../../images/foto_scaleup/24-4.jpg" class="d-block w-100" alt="Scale Up 2024 - 3" />
+                        </div>
                       </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselSession1" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselSession1" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                      </button>
                     </div>
-                    <div class="col-lg-7">
-                      <div class="session-meta d-flex flex-wrap mb-2">
-                        <span class="meta-item"><i class="fas fa-calendar-alt"></i> 20 April 2024</span>
-                        <span class="meta-item"><i class="fas fa-map-marker-alt"></i> Nutrihub & Hybrid</span>
-                      </div>
-                      <h3 class="card-title mt-2">Mengulik Kisah dan Cerita Penuh Makna Dibalik Adaptasi Lensa</h3>
-                      <p class="session-theme fst-italic text-secondary">"Kita akan mengulik bagaimana ya dunia fotografi ini jika ditelisik lebih dalam lagi?"</p>
-                      <div class="session-speaker d-flex align-items-center gap-3 mt-4">
-                        <img src="https://placehold.co/64x64/094162/FFFFFF?text=MFA" alt="Foto M. Fadhil Andika Putra" class="rounded-circle" />
-                        <div>
-                          <p class="mb-0 text-muted small">Pembicara</p>
-                          <h5 class="mb-1 text-dark">Dwinda Nur Oceani</h5>
-                          <p class="mb-0 text-muted small">Visual Story Teller</p>
-                        </div>
+                  </div>
+
+                  <div class="col-lg-6 session-content">
+                    <div class="session-meta d-flex flex-wrap mb-2">
+                      <span class="meta-item"><i class="fas fa-calendar-alt"></i> 20 April 2024</span>
+                      <span class="meta-item"><i class="fas fa-map-marker-alt"></i> Nutrihub & Hybrid</span>
+                    </div>
+                    <h3 class="card-title">Mengulik Kisah dan Cerita Penuh Makna di Balik Adaptasi Lensa</h3>
+                    <p class="session-theme fst-italic text-secondary">"Kita akan mengulik bagaimana dunia fotografi ini jika ditelisik lebih dalam lagi."</p>
+                    <div class="session-speaker d-flex align-items-center gap-3 mt-4">
+                      <img src="https://placehold.co/64x64/094162/FFFFFF?text=DN" alt="Dwinda Nur Oceani" class="rounded-circle" />
+                      <div>
+                        <p class="mb-0 text-muted small">Pembicara</p>
+                        <h5 class="mb-1 text-dark">Dwinda Nur Oceani</h5>
+                        <p class="mb-0 text-muted small">Visual Story Teller</p>
                       </div>
                     </div>
                   </div>
@@ -252,101 +246,39 @@
               </div>
             </div>
 
-            <div class="col-12 scaleup-item" data-category="session2">
-              <div class="card p-4 shadow-sm">
-                <div class="row g-4 align-items-center">
-                  <div class="col-lg-12">
-                    <div class="chapter-gallery">
-                      <div id="carouselChapter1Detail" class="carousel slide h-100" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselChapter1Detail" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselChapter1Detail" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselChapter1Detail" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="../../images/foto_scaleup/24-1.jpg" class="d-block w-100" alt="Suasana Mengajar di Chapter 1" />
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../../images/foto_scaleup/24-2.jpg" class="d-block w-100" alt="Anak-anak di Pojok Baca" />
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../../images/foto_scaleup/24-4.jpg" class="d-block w-100" alt="Foto Bersama Volunteer dan Siswa" />
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselChapter1Detail" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselChapter1Detail" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="col-lg-7">
-                      <div class="session-meta d-flex flex-wrap mb-2">
-                        <span class="meta-item"><i class="fas fa-calendar-alt"></i> 20 April 2024</span>
-                        <span class="meta-item"><i class="fas fa-map-marker-alt"></i> Nutrihub & Hybrid</span>
-                      </div>
-                      <h3 class="card-title mt-2">Mengulik Kisah dan Cerita Penuh Makna Dibalik Adaptasi Lensa</h3>
-                      <p class="session-theme fst-italic text-secondary">"Kita akan mengulik bagaimana ya dunia fotografi ini jika ditelisik lebih dalam lagi?"</p>
-                      <div class="session-speaker d-flex align-items-center gap-3 mt-4">
-                        <img src="https://placehold.co/64x64/094162/FFFFFF?text=MFA" alt="Foto M. Fadhil Andika Putra" class="rounded-circle" />
-                        <div>
-                          <p class="mb-0 text-muted small">Pembicara</p>
-                          <h5 class="mb-1 text-dark">Dwinda Nur Oceani</h5>
-                          <p class="mb-0 text-muted small">Visual Story Teller</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+            <!-- === Session 3 (Contoh lainnya) === -->
             <div class="col-12 scaleup-item" data-category="session3">
               <div class="card p-4 shadow-sm">
-                <div class="row g-4 align-items-center">
-                  <div class="col-lg-12">
-                    <div class="chapter-gallery">
-                      <div id="carouselChapter1Detail" class="carousel slide h-100" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselChapter1Detail" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselChapter1Detail" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselChapter1Detail" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <div class="row g-4 align-items-center flex-column flex-lg-row-reverse">
+                  <div class="col-lg-6">
+                    <div id="carouselSession3" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner rounded-3 overflow-hidden">
+                        <div class="carousel-item active">
+                          <img src="../../images/foto_scaleup/-1.jpg" class="d-block w-100" alt="Scale Up Canva 1" />
                         </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="../../images/foto_scaleup/-1.jpg" class="d-block w-100" alt="Suasana Mengajar di Chapter 1" />
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../../images/foto_scaleup/-2.jpg" class="d-block w-100" alt="Anak-anak di Pojok Baca" />
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../../images/foto_scaleup/-3.jpg" class="d-block w-100" alt="Foto Bersama Volunteer dan Siswa" />
-                          </div>
+                        <div class="carousel-item">
+                          <img src="../../images/foto_scaleup/-2.jpg" class="d-block w-100" alt="Scale Up Canva 2" />
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselChapter1Detail" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselChapter1Detail" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
-                        </button>
+                        <div class="carousel-item">
+                          <img src="../../images/foto_scaleup/-3.jpg" class="d-block w-100" alt="Scale Up Canva 3" />
+                        </div>
                       </div>
                     </div>
-                    <div class="col-lg-7">
-                      <div class="session-meta d-flex flex-wrap mb-2">
-                        <span class="meta-item"><i class="fas fa-calendar-alt"></i>29 September 2024</span>
-                        <span class="meta-item"><i class="fas fa-map-marker-alt"></i>Eds Waffle Pekanbaru & Zoom meeting</span>
-                      </div>
-                      <h3 class="card-title mt-2">Menciptakan Visual Kreatif Bersama Canva</h3>
-                      <p class="session-theme fst-italic text-secondary">Bersama pemateri berpengalaman yang akan mengisi acara ini yaitu kak Virgi Alfiansah.</p>
-                      <div class="session-speaker d-flex align-items-center gap-3 mt-4">
-                        <img src="https://placehold.co/64x64/094162/FFFFFF?text=MFA" alt="Foto M. Fadhil Andika Putra" class="rounded-circle" />
-                        <div>
-                          <p class="mb-0 text-muted small">Pembicara</p>
-                          <h5 class="mb-1 text-dark">Virgi Alfiansah.</h5>
-                          <p class="mb-0 text-muted small">Digital Creator dan Canva Educator</p>
-                        </div>
+                  </div>
+
+                  <div class="col-lg-6 session-content">
+                    <div class="session-meta d-flex flex-wrap mb-2">
+                      <span class="meta-item"><i class="fas fa-calendar-alt"></i> 29 September 2024</span>
+                      <span class="meta-item"><i class="fas fa-map-marker-alt"></i> Eds Waffle Pekanbaru & Zoom Meeting</span>
+                    </div>
+                    <h3 class="card-title">Menciptakan Visual Kreatif Bersama Canva</h3>
+                    <p class="session-theme fst-italic text-secondary">Bersama pemateri berpengalaman yaitu Kak Virgi Alfiansah.</p>
+                    <div class="session-speaker d-flex align-items-center gap-3 mt-4">
+                      <img src="https://placehold.co/64x64/094162/FFFFFF?text=VA" alt="Virgi Alfiansah" class="rounded-circle" />
+                      <div>
+                        <p class="mb-0 text-muted small">Pembicara</p>
+                        <h5 class="mb-1 text-dark">Virgi Alfiansah</h5>
+                        <p class="mb-0 text-muted small">Digital Creator & Canva Educator</p>
                       </div>
                     </div>
                   </div>
